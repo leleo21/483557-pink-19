@@ -10,9 +10,10 @@
 
 <body>
   <header class="page-header page-header--photo">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
+    <a class="logo page-header__logo">
+      <img class="logo-image page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
     </a>
+    <!-- навигация -->
     <nav class="main-nav">
       <button class="main-nav__toogle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-list">
@@ -25,11 +26,132 @@
     <h1 class="page-header__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
   </header>
   <main>
-
+    <!-- блок с формой -->
+    <section class="contest">
+      <h2 class="visually-hidden">Форма участия в конкурсе</h2>
+      <p class="contest__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <!-- форма -->
+      <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
+        <!-- ФИО -->
+        <fieldset class="contest__form-item form-name">
+          <legend class="visually-hidden"> Введите ФИО</legend>
+          <div class="form-name__wrapper">
+            <label class="form-name__title">
+              Фамилия:
+              <input type="text" placeholder="Укажите фамилию *">
+            </label>
+          </div>
+          <div class="form-name__wrapper">
+            <label class="form-name__title">
+              Имя:
+              <input type="text" placeholder="Введите ваше имя *">
+            </label>
+          </div>
+          <div class="form-name__wrapper">
+            <label class="form-name__title">
+              Отчество:
+              <input type="text" placeholder="Ну и отчество тоже">
+            </label>
+          </div>
+        </fieldset>
+        <!-- чекбоксы -->
+        <fieldset class="contest__form-item checkbox">
+          <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox" checked>
+              Сделал селфи с акулой
+            </label>
+          </div>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox" checked>
+              Обгорел на пляже
+            </label>
+          </div>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox">
+              Видел Чака Норриса
+            </label>
+          </div>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox">
+              Накупил сувениров
+            </label>
+          </div>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox" checked>
+              Удержал башню
+            </label>
+          </div>
+          <div class="checkbox__wrapper">
+            <label class="checkbox__title">
+              <input class="visually-hidden" type="checkbox">
+              Разгромил отель
+            </label>
+          </div>
+        </fieldset>
+        <!-- телефон, email -->
+        <fieldset class="contest__form-item form-contacts">
+          <legend class="visually-hidden"> Введите телефон и email</legend>
+          <div class="form-contacts__wrapper">
+            <label class="form-contacts__title">
+              Номер телефона
+              <input type="text" placeholder="Номер, пожалуйста">
+            </label>
+          </div>
+          <div class="form-contacts__wrapper">
+            <label class="form-contacts__title">
+              Адрес почты
+              <input type="text" placeholder="Введите почту *">
+            </label>
+          </div>
+        </fieldset>
+        <!-- радиокнопки -->
+        <fieldset class="contest__form-item form-radio">
+          <legend class="contest__form-legend">С каким приложением путешествовали?</legend>
+          <div class="form-radio__wrapper">
+            <label class="form-radio__title">
+              <input class="visually-hidden" type="radio" name="os" checked>
+              Pink для iOS
+            </label>
+          </div>
+          <div class="form-radio__wrapper">
+            <label class="form-radio__title">
+              <input class="visually-hidden" type="radio" name="os">
+              Pink на Android
+            </label>
+          </div>
+          <div class="form-radio__wrapper">
+            <label class="form-radio__title">
+              <input class="visually-hidden" type="radio" name="os">
+              Windows Phone
+            </label>
+          </div>
+        </fieldset>
+        <!-- Тектовое поле -->
+        <fieldset class="contest__form-item form-textarea">
+          <legend class="contest__form-legend">Опишите свои эмоции</legend>
+          <div class="form-textarea__wrapper">
+            <label class="visually-hidden">Текст письма:</label>
+            <textarea class="form-textarea__text" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях" required></textarea>
+          </div>
+        </fieldset>
+        <!-- кнопка отправки формы -->
+        <button class="btn contest__form-btn" type="submit">Отправить форму</button>
+        <div class="contest__form-footnote">
+          <span class="contest__form-star">*</span>
+          <b class="contest__form-note"> — обязательные поля</b>
+        </div>
+      </form>
+    </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-      <img class="page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
+    <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <img class="logo__image page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
     </a>
     <ul class="page-footer__social social">
       <li class="social__item">
@@ -45,10 +167,30 @@
     <span class="page-footer__copyright">
       <b class="page-footer__copyright-text">Разработано</b>
       <a class="page-footer__copyright-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <!-- SVG?-->><img src="" alt="HTML Academy" width="" height="">
+        <!-- SVG?--><img src="" alt="HTML Academy" width="" height="">
       </a>
     </span>
   </footer>
+  <!-- pop-up ошибка-->
+  <section class="modal modal-error">
+    <h2 class="visually-hidden">Проверьте правильность заполнения данных.</h2>
+    <div class="modal__wrapper">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="btn modal__btn">Ok</button>
+    </div>
+  </section>
+  <!--pop-up данные отправлены-->
+  <section class="modal modal-success">
+    <h2 class="visually-hidden">Данные отправлены.</h2>
+    <div class="modal__wrapper">
+      <h3 class="modal__title">Ваша заявка отправлена</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="modal__btn-wrapper">
+        <button class="btn modal__btn">Закрыть окно</button>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

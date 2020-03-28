@@ -10,9 +10,10 @@
 
 <body>
   <header class="page-header page-header--photo">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
+    <a class="logo page-header__logo">
+      <img class="logo__image page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
     </a>
+    <!-- навигация -->
     <nav class="main-nav">
       <button class="main-nav__toogle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-list">
@@ -25,6 +26,7 @@
     <h1 class="page-header__heading">Фотографии пользователей</h1>
   </header>
   <main class="page-main">
+    <!-- галерея -->
     <section class="photo">
       <h2 class="visually-hidden">Новые фото на сайте</h2>
       <p class="photo__paragraph">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
@@ -95,11 +97,41 @@
         </li>
       </ul>
     </section>
-    <!-- тут будет обработка и отправка изображения -->
+    <!-- обработка изображений -->
+    <section class="upgrade">
+      <h2 class="visually-hidden">Обработка изображений</h2>
+      <p class="upgade__paragpaph">Затмите их всех!
+        Выкладывайте все, что накопилось в телефоне!</p>
+      <!-- тут скорее всего форма -->
+      <div class="upgrade__wrapper">
+        <img class="upgrade__image" src="https://via.placeholder.com/150x150" alt="Результат обработки фото" width="" height="">
+        <p class="upgrade__item-custom">
+          <button class="upgrade__btn-custom upgrade__btn-custom--size">
+            <img src="" alt="Изменить размер" width="" height="">
+          </button>
+          <button class="upgrade__btn-custom upgrade__btn-custom--fill">
+            <img src="" alt="Изменить заливку" width="" height="">
+          </button>
+          <button class="upgrade__btn-custom upgrade__btn-custom--contrast">
+            <img src="" alt="Изменить контраст" width="" height="">
+          </button>
+        </p>
+        <!-- ползунок -->
+        <div class="upgrade__range-wrapper">
+          <div class="upgrade__range">
+            <button class="upgrade__range-btn"></button>
+          </div>
+        </div>
+        <div class="upgrade__btn">
+          <button class="upgrade__btn upgrade__btn--send" type="submit">Запостить</button>
+          <button class="upgrade__btn upgrade__btn--reset" type="reset">Отмена</button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-      <img class="page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
+    <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <img class="logo__image page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
     </a>
     <ul class="page-footer__social social">
       <li class="social__item">
