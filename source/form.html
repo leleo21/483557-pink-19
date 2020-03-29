@@ -35,15 +35,15 @@
         <!-- ФИО -->
         <fieldset class="contest__form-item form-about">
           <legend class="visually-hidden"> Введите ФИО</legend>
-          <div class="form-name__wrapper">
+          <div class="form-about__wrapper">
             <label class="form-about__title" for="surname-field">Фамилия:</label>
-            <input class="form-about__text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
+            <input class="form-about__text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" pattern="^[А-Яа-яЁё\s]+$" required>
           </div>
-          <div class="form-name__wrapper">
+          <div class="form-about__wrapper">
             <label class="form-about__title" for="name-field">Имя: </label>
-            <input class="form-about__text" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
+            <input class="form-about__text" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" pattern="^[А-Яа-яЁё\s]+$" required>
           </div>
-          <div class="form-name__wrapper">
+          <div class="form-about__wrapper">
             <label class="form-about__title" for="patronymic-field">Отчество:</label>
             <input class="form-about__text" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
           </div>
@@ -79,11 +79,11 @@
         <!-- телефон, email -->
         <fieldset class="contest__form-item form-about">
           <legend class="visually-hidden"> Введите телефон и email</legend>
-          <div class="form-contacts__wrapper">
+          <div class="form-about__wrapper">
             <label class="form-about__title" for="tel-field">Номер телефона</label>
             <input class="form-about__text" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
           </div>
-          <div class="form-contacts__wrapper">
+          <div class="form-about__wrapper">
             <label class="form-about__title" for="email-field">Адрес почты</label>
             <input class="form-about__text" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
           </div>
