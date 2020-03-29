@@ -34,111 +34,83 @@
       <!-- форма -->
       <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
         <!-- ФИО -->
-        <fieldset class="contest__form-item form-name">
+        <fieldset class="contest__form-item form-about">
           <legend class="visually-hidden"> Введите ФИО</legend>
           <div class="form-name__wrapper">
-            <label class="form-name__title">
-              Фамилия:
-              <input type="text" placeholder="Укажите фамилию *" pattern="^[А-Яа-яЁё\s]+$">
-            </label>
+            <label class="form-about__title" for="surname-field">Фамилия:</label>
+            <input class="form-about__text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
           </div>
           <div class="form-name__wrapper">
-            <label class="form-name__title">
-              Имя:
-              <input type="text" placeholder="Введите ваше имя *" pattern="^[А-Яа-яЁё\s]+$">
-            </label>
+            <label class="form-about__title" for="name-field">Имя: </label>
+            <input class="form-about__text" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
           </div>
           <div class="form-name__wrapper">
-            <label class="form-name__title">
-              Отчество:
-              <input type="text" placeholder="Ну и отчество тоже" pattern="^[А-Яа-яЁё\s]+$">
-            </label>
+            <label class="form-about__title" for="patronymic-field">Отчество:</label>
+            <input class="form-about__text" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
         <!-- чекбоксы -->
         <fieldset class="contest__form-item checkbox">
           <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox" checked>
-              Сделал селфи с акулой
-            </label>
+            <input class="checkbox__option" type="checkbox" name="shark" id="shark-field" checked>
+            <label class="checkbox__title" for="shark-field">Сделал селфи с акулой</label>
           </div>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox" checked>
-              Обгорел на пляже
-            </label>
+            <input class="checkbox__option" type="checkbox" name="beach" id="beach-field" checked>
+            <label class="checkbox__title" for="beach-field">Обгорел на пляже </label>
           </div>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox">
-              Видел Чака Норриса
-            </label>
+            <input class="checkbox__option" type="checkbox" name="norris" id="norris-field">
+            <label class="checkbox__title" for="norris-field">Видел Чака Норриса</label>
           </div>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox">
-              Накупил сувениров
-            </label>
+            <input class="checkbox__option" type="checkbox" name="gift" id="gift-field">
+            <label class="checkbox__title" for="gift-field">Накупил сувениров</label>
           </div>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox" checked>
-              Удержал башню
-            </label>
+            <input class="checkbox__option" type="checkbox" name="tower" id="tower-field" checked>
+            <label class="checkbox__title" for="tower-field">Удержал башню</label>
           </div>
           <div class="checkbox__wrapper">
-            <label class="checkbox__title">
-              <input class="visually-hidden" type="checkbox">
-              Разгромил отель
-            </label>
+            <input class="checkbox__option" type="checkbox" name="hotel" id="hotel-field">
+            <label class="checkbox__title" for="hotel-field">Разгромил отель</label>
           </div>
         </fieldset>
         <!-- телефон, email -->
-        <fieldset class="contest__form-item form-contacts">
+        <fieldset class="contest__form-item form-about">
           <legend class="visually-hidden"> Введите телефон и email</legend>
           <div class="form-contacts__wrapper">
-            <label class="form-contacts__title">
-              Номер телефона
-              <input type="tel" placeholder="Номер, пожалуйста">
-            </label>
+            <label class="form-about__title" for="tel-field">Номер телефона</label>
+            <input class="form-about__text" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
           </div>
           <div class="form-contacts__wrapper">
-            <label class="form-contacts__title">
-              Адрес почты
-              <input type="email" placeholder="Введите почту *">
-            </label>
+            <label class="form-about__title" for="email-field">Адрес почты</label>
+            <input class="form-about__text" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
           </div>
         </fieldset>
         <!-- радиокнопки -->
-        <fieldset class="contest__form-item form-radio">
+        <fieldset class="contest__form-item radio">
           <legend class="contest__form-legend">С каким приложением путешествовали?</legend>
-          <div class="form-radio__wrapper">
-            <label class="form-radio__title">
-              <input class="visually-hidden" type="radio" name="os" checked>
-              Pink для iOS
-            </label>
+          <div class="radio__wrapper">
+            <input class="radio__option" type="radio" name="os" id="apple-field" value="ios" checked>
+            <label class="radio__title" for="apple-field">Pink для iOS</label>
           </div>
-          <div class="form-radio__wrapper">
-            <label class="form-radio__title">
-              <input class="visually-hidden" type="radio" name="os">
-              Pink на Android
-            </label>
+          <div class="radio__wrapper">
+            <input class="radio__option" type="radio" name="os" id="android-field" value="android">
+            <label class="radio__title" for="android-field">Pink на Android</label>
           </div>
-          <div class="form-radio__wrapper">
-            <label class="form-radio__title">
-              <input class="visually-hidden" type="radio" name="os">
-              Windows Phone
-            </label>
+          <div class="radio__wrapper">
+            <input class="radio__option" type="radio" name="os" id="windows-field" value="windows">
+            <label class="radio__title" for="windows-field">Windows Phone</label>
           </div>
         </fieldset>
         <!-- Тектовое поле -->
-        <fieldset class="contest__form-item form-textarea">
+        <fieldset class="contest__form-item textarea">
           <legend class="contest__form-legend">Опишите свои эмоции</legend>
-          <div class="form-textarea__wrapper">
-            <label class="visually-hidden">Текст письма:</label>
-            <textarea class="form-textarea__text" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <div class="textarea__wrapper">
+            <label class="visually-hidden" for="text-area">Текст письма:</label>
+            <textarea class="textarea__text" name="text" id="text-area" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
         </fieldset>
         <!-- кнопка отправки формы -->
@@ -173,7 +145,7 @@
     </span>
   </footer>
   <!-- pop-up ошибка-->
-  <section class="modal modal-error">
+  <section class="modal modal--error">
     <h2 class="visually-hidden">Проверьте правильность заполнения данных.</h2>
     <div class="modal__wrapper">
       <h3 class="modal__title">Что-то пошло не так!</h3>
@@ -182,7 +154,7 @@
     </div>
   </section>
   <!--pop-up данные отправлены-->
-  <section class="modal modal-success">
+  <section class="modal modal--success">
     <h2 class="visually-hidden">Данные отправлены.</h2>
     <div class="modal__wrapper">
       <h3 class="modal__title">Ваша заявка отправлена</h3>
