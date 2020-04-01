@@ -1,0 +1,85 @@
+.page-header {
+  text-decoration: none;
+  background-color: @dark;
+  background-image: url("./../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  color: @white;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 21px;
+  background-color: @menu-bgc;
+}
+
+.page-header__logo {
+  width: 75px;
+  height: 22px;
+  margin-left: 20px;
+}
+
+.page-header__toogle {
+  width: 50px;
+  height: 24px;
+  margin-right: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__burger {
+  position: relative;
+  /* временно*/
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: @white;
+}
+
+
+.page-header__burger::before {
+  content: " ";
+  position: absolute;
+  transform: translateY(-8px);
+  width: 50px;
+  height: 4px;
+  background-color: @white;
+  /*временно*/
+  margin-left: -25px;
+}
+
+.page-header__burger::after {
+  content: " ";
+  position: absolute;
+  transform: translateY(8px);
+  width: 50px;
+  height: 4px;
+  background-color: @white;
+  /*временно*/
+  margin-left: -25px;
+}
+
+.page-header__heading {
+  margin-top: 95px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+// так нельзя же?
+// .page-header__toogle:hover {
+
+//   .page-header__burger,
+//   .page-header__burger::before,
+//   .page-header__burger::after {
+//     background-color: @hover-mob-color;
+//   }
+// }
