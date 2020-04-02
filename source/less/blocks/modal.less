@@ -6,26 +6,19 @@
 }
 
 .modal__title {
-  padding-top: 45px;
-  padding-bottom: 25px;
+  padding: 45px 0 25px;
   font-size: 18px;
 }
 
 .modal__text {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px;
   line-height: 24px;
-  color: @dark;
 }
 
 .modal__btn {
   width: 276px;
-  margin-top: 50px;
-  margin-right: 22px;
-  margin-left: 22px;
-  margin-bottom: 44px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin: 50px 22px 44px;
+  padding: 15px 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -35,15 +28,15 @@
   border: solid 2px @green;
   border-radius: 4px;
   cursor: pointer;
-}
 
-.modal__btn:hover {
-  background-color: @green-hover;
-  border: 2px solid @green-hover;
-}
+  &:hover {
+    background-color: @green-hover;
+    border: 2px solid @green-hover;
+  }
 
-.modal__btn:active {
-  color: @white-active;
+  &:active {
+    color: @white-active;
+  }
 }
 
 .modal__btn-wrapper {

@@ -3,8 +3,7 @@
 }
 
 .upgade__paragpaph {
-  padding-bottom: 48px;
-  padding-top: 48px;
+  padding: 48px 0;
   line-height: 30px;
 }
 
@@ -31,19 +30,19 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
 
-.upgrade__btn-custom--size {
-  background-image: url("./../img/icon-editor-crop.svg");
-}
+  &--size {
+    background-image: url("./../img/icon-editor-crop.svg");
+  }
 
-.upgrade__btn-custom--fill {
-  background-image: url("./../img/icon-editor-fill.svg");
-}
+  &--fill {
+    background-image: url("./../img/icon-editor-fill.svg");
+  }
 
-.upgrade__btn-custom--contrast {
-  background-image: url("./../img/icon-editor-contrast.svg");
-  background-position: 50% 50%;
+  &--contrast {
+    background-image: url("./../img/icon-editor-contrast.svg");
+    background-position: 50% 50%;
+  }
 }
 
 .upgrade__range-wrapper {
@@ -70,17 +69,16 @@
   height: 15px;
   border-radius: 50%;
   background-color: @grey;
-  border: 2px solid @hover-mob-color;
+  border: 2px solid @pink;
   cursor: pointer;
 }
 
 .upgrade__range-btn:active {
-  background-color: @hover-mob-color;
+  background-color: @pink;
 }
 
 .upgrade__btn-wrapper {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding: 40px 0 30px;
   border-top: 1px solid @dark-opac;
 }
 
@@ -92,38 +90,38 @@
   font-weight: 700;
   line-height: 18px;
   text-align: center;
-  color: @hover-mob-color;
+  color: @pink;
   background-color: transparent;
-  border: 3px solid @hover-mob-color;
+  border: 3px solid @pink;
   border-radius: 40px;
   cursor: pointer;
-}
 
-.upgrade__btn:hover {
-  background-color: @hover-mob-color;
-  color: @white;
-}
+  &:hover {
+    background-color: @pink;
+    color: @white;
+  }
 
-.upgrade__btn:active {
-  background-color: @hover-mob-color;
-  color: @white-active;
-}
+  &:active {
+    background-color: @pink;
+    color: @white-active;
+  }
 
-.upgrade__btn--cancel {
-  color: @dark-opac;
-  border: 3px solid @dark-opac;
-}
+  &--cancel {
+    color: @dark-opac;
+    border: 3px solid @dark-opac;
+  }
 
-.upgrade__btn--cancel:hover {
-  background-color: transparent;
-  opacity: 0.3;
-  color: @dark;
-  border: 3px solid @dark;
-}
+  &--cancel:hover {
+    background-color: transparent;
+    opacity: 0.3;
+    color: @dark;
+    border: 3px solid @dark;
+  }
 
-.upgrade__btn--cancel:active {
-  background-color: @dark;
-  opacity: 0.3;
-  color: @white-active;
-  border: 3px solid @dark;
+  &--cancel:active {
+    background-color: @dark;
+    opacity: 0.3;
+    color: @white-active;
+    border: 3px solid @dark;
+  }
 }

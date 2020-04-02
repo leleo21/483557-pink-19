@@ -5,7 +5,6 @@
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  color: @dark;
 }
 
 .contest__form-item {
@@ -13,10 +12,10 @@
   padding-top: 50px;
   background-color: @white;
   border: none;
-}
 
-.contest__form-item--choise {
-  background-color: @grey;
+  &--choise {
+    background-color: @grey;
+  }
 }
 
 .contest__form-legend {
@@ -24,7 +23,7 @@
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  color: @hover-mob-color;
+  color: @pink;
   background-color: @white;
 }
 
@@ -32,19 +31,19 @@
   background-color: @grey;
 }
 
-.form-about__wrapper {
+.contest__about-wrapper {
   width: 276px;
   margin: 0 auto;
 }
 
-.form-about__title {
+.contest__about-title {
   margin-bottom: 16px;
   line-height: 30px;
   text-transform: uppercase;
-  color: @hover-mob-color;
+  color: @pink;
 }
 
-.form-about__text {
+.contest__about-text {
   width: 276px;
   padding-top: 15px;
   padding-left: 21px;
@@ -53,80 +52,67 @@
   margin-bottom: 29px;
   font-size: 18px;
   line-height: 30px;
-  color: @dark;
   border: 2px solid @input-brdr-clr;
+
+  &:hover {
+    border: 2px solid @dark;
+  }
+
+  &:focus {
+    border: 2px solid @pink;
+  }
+
+  &::placeholder {
+    font-size: 18px;
+  }
 }
 
-.form-about__text:hover {
-  border: 2px solid @dark;
-}
-
-.form-about__text:focus {
-  border: 2px solid @hover-mob-color;
-}
-
-.form-about__text::placeholder {
-  font-size: 18px;
-  color: @dark;
-}
-
-.contest-checkbox__wrapper {
+.contest__checkbox-wrapper {
   padding-bottom: 45px;
   background-color: @grey;
 }
 
-.contest-checkbox__title {
+.contest__checkbox-title {
   font-size: 18px;
   line-height: 30px;
-  color: @dark;
 }
 
-.contest-radio__wrapper {
+.contest__radio-wrapper {
   padding-bottom: 45px;
   background-color: @grey;
 }
 
-.contest-radio__title {
+.contest__radio-title {
   font-size: 18px;
   line-height: 30px;
-  color: @dark;
 }
 
-.textarea__text {
+.contest__about-textarea {
   width: 276px;
   min-height: 197px;
-  padding-left: 21px;
-  padding-right: 21px;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding: 23px 21px;
   margin-bottom: 29px;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @input-brdr-clr;
-  color: @dark;
-}
 
-.textarea__text::placeholder {
-  font-size: 18px;
-  color: @dark;
-}
+  &:hover {
+    border: 2px solid @dark;
+  }
 
-.textarea__text:hover {
-  border: 2px solid @dark;
-}
+  &:focus {
+    border: 2px solid @pink;
+  }
 
-.textarea__text:focus {
-  border: 2px solid @hover-mob-color;
+  &::placeholder {
+    font-size: 18px;
+  }
 }
 
 .contest__form-btn {
   width: 276px;
-  margin-top: 50px;
-  margin-right: 22px;
-  margin-left: 22px;
-  margin-bottom: 44px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin: 50px 22px 44px;
+  padding: 15px 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -136,20 +122,20 @@
   border: solid 2px @green;
   border-radius: 4px;
   cursor: pointer;
-}
 
-.contest__form-btn:hover {
-  background-color: @green-hover;
-  border: 2px solid @green-hover;
-}
+  &:hover {
+    background-color: @green-hover;
+    border: 2px solid @green-hover;
+  }
 
-.contest__form-btn:active {
-  color: @white-active;
-}
+  &:active {
+    color: @white-active;
+  }
 
-.contest__form-btn:disabled {
-  background-color: @input-brdr-clr;
-  border: solid 2px @input-brdr-clr;
+  &:disabled {
+    background-color: @input-brdr-clr;
+    border: solid 2px @input-brdr-clr;
+  }
 }
 
 .contest__form-footnote {
@@ -157,9 +143,8 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: @dark;
 }
 
 .contest__form-star {
-  color: @hover-mob-color;
+  color: @pink;
 }
