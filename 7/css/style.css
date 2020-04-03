@@ -479,6 +479,11 @@ img {
   background-repeat: no-repeat;
   background-position: top center;
 }
+.page-main--background {
+  min-height: 462px;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: bottom top, bottom;
+}
 .page-main__heading {
   margin: 0;
   padding: 50px 50px 60px;
@@ -486,12 +491,6 @@ img {
   font-weight: 300;
   text-align: center;
   color: #ffffff;
-}
-.page-main__intro {
-  min-height: 298px;
-  background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: bottom left;
 }
 .download {
   width: 320px;
@@ -690,10 +689,10 @@ img {
 }
 .price__table {
   margin: 0 auto;
-  width: 300%;
+  width: 828px;
   table-layout: fixed;
-  -webkit-transform: translateX(-320px);
-          transform: translateX(-320px);
+  -webkit-transform: translateX(-255px);
+          transform: translateX(-255px);
   background-color: #ffffff;
   border-collapse: collapse;
 }
