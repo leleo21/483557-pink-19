@@ -1,6 +1,40 @@
 .page-footer {
-  padding-top: 40px;
   text-align: center;
+}
+
+.footer__contacts {
+  padding-top: 48px;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  background-color: @white;
+}
+
+
+.page-footer__map-wrapper {
+  position: relative;
+  z-index: 100;
+  width: 320px;
+  min-height: 645px;
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-footer__map-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 125px;
+  background-image: url("../../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center top;
+}
+
+.page-footer__social-wrapper {
+  width: 320px;
+  padding-top: 40px;
 }
 
 .page-footer__social {

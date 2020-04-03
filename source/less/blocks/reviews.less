@@ -1,6 +1,15 @@
 .reviews {
-  margin-top: 50px;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 49px;
   text-align: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.reviews__item {
+  width: 276px;
+  margin-left: 22px;
 }
 
 .reviews__author {
@@ -18,11 +27,19 @@
   line-height: 30px;
 }
 
+.reviews__toggles {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  margin-left: -50px;
+}
+
 .reviews__toggle {
   width: 6px;
   height: 6px;
   margin-left: 19px;
-  vertical-align: top;
+  padding: 0;
+  vertical-align: middle;
   transform: translateX(-5px);
   background-color: @dark;
   opacity: 0.3;
@@ -34,6 +51,8 @@
     background-color: @white;
     opacity: 1;
     border: 3px solid @dark;
+    width: 12px;
+    height: 12px;
   }
 
   &:hover {
