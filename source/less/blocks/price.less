@@ -1,12 +1,12 @@
 .price {
   position: relative;
   width: 320px;
-  padding: 138px 0 102px;
+  padding: 115px 0 98px;
   overflow: hidden;
   background-color: @grey;
   background-image: url("./../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -9px;
 }
 
 .price__table {
@@ -26,7 +26,7 @@
 
 .price__title-blog {
   width: 276px;
-  padding: 22px 70px;
+  padding: 18px 70px;
   border: 2px solid @grey;
   text-align: center;
 
@@ -36,11 +36,10 @@
     height: 73px;
     background-image: url("./../img/bg-hit.svg");
     background-repeat: no-repeat;
-    transform: translate(-69px, -21px);
+    transform: translate(-73px, -18px);
   }
 
   &--text {
-    font-size: 10px;
     line-height: 21px;
     text-transform: uppercase;
     transform: rotate(-45deg) translate(-15px, 3px);
@@ -67,8 +66,9 @@
 }
 
 .price__options-access {
-  padding: 15px 0 15px 15px;
+  padding: 14px 0 15px 20px;
   line-height: 30px;
+  text-transform: uppercase;
   color: @dark;
   border: 2px solid @grey;
 
@@ -79,27 +79,28 @@
   &--available {
     background-image: url("./../img/icon-yes.svg");
     background-repeat: no-repeat;
-    background-position: 280px center;
+    background-position: 230px center;
+    background-size: 31px;
   }
 
   &--not-available {
     background-image: url("./../img/icon-no.svg");
     background-repeat: no-repeat;
-    background-position: 280px center;
+    background-position: 230px center;
   }
 }
 
 .price__toggles {
   position: absolute;
-  top: 470px;
+  top: 434px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -40px;
 }
 
 .price__toggle {
   width: 6px;
   height: 6px;
-  margin-left: 19px;
+  margin-left: 15px;
   padding: 0;
   vertical-align: middle;
   transform: translateX(-5px);

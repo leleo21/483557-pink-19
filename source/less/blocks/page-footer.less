@@ -1,9 +1,11 @@
 .page-footer {
+  position: relative;
+  top: -65px;
   text-align: center;
 }
 
 .footer__contacts {
-  padding-top: 48px;
+  padding-top: 43px;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -19,22 +21,26 @@
   background-image: url("./../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.page-footer__map-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 125px;
-  background-image: url("./../img/bg-triangle-white-footer.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: center top;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 125px;
+    background-image: url("./../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center top;
+  }
 }
 
 .page-footer__social-wrapper {
   width: 320px;
   padding-top: 40px;
+
+  &--cut {
+    display: none;
+  }
 }
 
 .page-footer__social {
