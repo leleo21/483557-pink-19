@@ -1,18 +1,16 @@
 .page-header {
+  position: relative;
+  z-index: 1;
   text-decoration: none;
-  background-color: @dark;
-  background-image: url("./../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
   color: @white;
+  background-color: @dark-bgc;
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0 21px;
-  background-color: @dark-bgc;
+  padding: 20px 0 24px;
 }
 
 .page-header__logo {
@@ -88,12 +86,4 @@
     /*временно*/
     margin-left: -25px;
   }
-}
-
-.page-header__heading {
-  margin-top: 95px;
-  padding: 0 50px 60px;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
 }

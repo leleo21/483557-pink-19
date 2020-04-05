@@ -6,35 +6,41 @@
 .photo__paragraph {
   width: 280px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 45px 10px;
   font-weight: 400;
   line-height: 30px;
 }
 
 .photo__list {
+  margin: 0;
   padding: 0;
+  padding-top: 4px;
   text-align: left;
   list-style: none;
 }
 
 .photo__item {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding-bottom: 28px;
-  background-color: @grey;
+  background-color: @white;
 
   &--panorama {
     position: relative;
     width: 100%;
     padding: 0;
-    padding-bottom: 28px;
   }
 }
 
-.photo__best-panorama {
+.photo__item-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  background-color: @grey;
+}
+
+.photo__label-panorama {
   position: absolute;
-  left: 56%;
+  left: 160px;
   width: 140px;
   height: 36px;
   background-color: @pink;
@@ -51,7 +57,8 @@
 }
 
 .photo__author {
-  padding-top: 25px;
+  margin: 0;
+  padding-top: 20px;
   padding-left: 17px;
   font-size: 14px;
   font-weight: 700;
@@ -62,11 +69,12 @@
   font-size: 12px;
   font-weight: 300;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 .photo__comment {
-  padding: 0 15px;
-  font-weight: 300;
+  margin: 0;
+  padding: 0 19px 15px;
   line-height: 24px;
 }
 
@@ -74,8 +82,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 130px;
-  padding-left: 18px;
+  width: 135px;
+  padding: 0 0 26px 18px;
 }
 
 .photo__like {
