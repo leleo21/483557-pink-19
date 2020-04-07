@@ -12,23 +12,25 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="logo page-header__logo" href="index.html">
-        <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
-      </a>
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="page-header__burger"></span>
-      </button>
+      <div class="page-header__wrapper-logo">
+        <a class="logo page-header__logo" href="index.html">
+          <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+        </a>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="page-header__burger"></span>
+        </button>
+      </div>
+      <!--навигация -->
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Главная</a></li>
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__active-link">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
+      </nav>
     </div>
-    <!--навигация -->
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Главная</a></li>
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__active-link">Фотографии</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-      </ul>
-    </nav>
   </header>
   <main class="page-main">
     <h1 class="page-main__heading">Фотографии пользователей</h1>
@@ -44,12 +46,12 @@
               <img class="photo__link-image" src="./img/panorama-mobile@1x.jpg" alt="Панорама" width="320" height="137">
             </a>
           </div>
-          <div class="photo__item-wrapper">
+          <div class="photo__item-wrapper photo__item-wrapper--panorama">
             <h3 class="photo__author">Анна <span class="photo__time">(5 минут назад)</span></h3>
             <p class="photo__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
               <!-- вопросы!-->
             </p>
-            <div class="photo__wrapper">
+            <div class="photo__wrapper photo__wrapper--panorama">
               <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
               <b class="photo__like-number">Нравится: 215</b>
             </div>
@@ -138,31 +140,48 @@
     <!-- обработка изображений -->
     <section class="upgrade">
       <h2 class="visually-hidden">Обработка изображений</h2>
-      <p class="upgade__paragpaph">Затмите их всех!
-        Выкладывайте&nbspвсе,&nbspчто накопилось в телефоне!</p>
+      <p class="upgade__paragpaph">
+        <b class="upgade__paragpaph--block">Затмите их всех!</b>
+        <b class="upgade__paragpaph--block">Выкладывайте&nbspвсе,&nbspчто накопилось в
+          телефоне!</b>
+      </p>
       <!--форма обработки изображений-->
       <form class="upgrade__form" action="https://echo.htmlacademy.ru" method="get">
         <img class="upgrade__image" src="./img/photo-road-mobile@1x.jpg" alt="Результат обработки фото" width="280" height="374">
-        <div class="upgrade__item-custom">
-          <button class="upgrade__btn-custom upgrade__btn-custom--size" type="button">
-            <span class="visually-hidden">Обрезать фото</span>
-          </button>
-          <button class="upgrade__btn-custom upgrade__btn-custom--fill" type="button">
-            <span class="visually-hidden">Изменить заливку</span>
-          </button>
-          <button class="upgrade__btn-custom upgrade__btn-custom--contrast" type="button">
-            <span class="visually-hidden">Изменить контраст</span>
-          </button>
-        </div>
-        <!-- ползунок -->
-        <div class="upgrade__range-wrapper">
-          <div class="upgrade__range">
-            <button class="upgrade__range-btn" type="button"></button>
+        <div class="upgrade__instruments">
+          <div class="upgrade__item-custom">
+            <button class="upgrade__btn-custom upgrade__btn-custom--size" type="button">
+              <span class="visually-hidden">Обрезать фото</span>
+            </button>
+            <button class="upgrade__btn-custom upgrade__btn-custom--fill" type="button">
+              <span class="visually-hidden">Изменить заливку</span>
+            </button>
+            <button class="upgrade__btn-custom upgrade__btn-custom--contrast" type="button">
+              <span class="visually-hidden">Изменить контраст</span>
+            </button>
           </div>
-        </div>
-        <div class="upgrade__btn-wrapper">
-          <button class="upgrade__btn " type="submit">Запостить</button>
-          <button class="upgrade__btn upgrade__btn--cancel" type="reset">Отмена</button>
+          <!-- ползунок -->
+          <div class="upgrade__range-wrapper">
+            <div class="upgrade__range-blog">
+              <div class="upgrade__range">
+                <button class="upgrade__range-btn" type="button"></button>
+              </div>
+            </div>
+            <div class="upgrade__range-blog upgrade__range-blog--cut">
+              <div class="upgrade__range">
+                <button class="upgrade__range-btn upgrade__range-btn--fill" type="button"></button>
+              </div>
+            </div>
+            <div class="upgrade__range-blog upgrade__range-blog--cut">
+              <div class="upgrade__range">
+                <button class="upgrade__range-btn upgrade__range-btn--contrast" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="upgrade__btn-wrapper">
+            <button class="upgrade__btn " type="submit">Запостить</button>
+            <button class="upgrade__btn upgrade__btn--cancel" type="reset">Отмена</button>
+          </div>
         </div>
       </form>
     </section>
@@ -218,6 +237,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

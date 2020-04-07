@@ -21,3 +21,34 @@
 .page-main__heading--index {
   padding: 25px 45px 80px;
 }
+
+@media (min-width: 660px) {
+  .page-main {
+    background-image: url("./../img/bg-back-tablet@1x.jpg");
+  }
+
+
+  .page-main__heading {
+    font-size: 50px;
+    padding: 110px 91px 150px;
+
+    &--index {
+      font-size: 40px;
+      padding: 103px 400px 0 78px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-main {
+    position: relative;
+    top: -90px;
+    padding-top: 90px;
+    background-image: url("./../img/bg-back-desktop@1x.jpg");
+  }
+
+  .page-main__heading--index {
+    padding: 0 720px 0 59px;
+    font-size: 50px;
+  }
+}

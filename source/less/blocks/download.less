@@ -84,11 +84,61 @@
 }
 
 .download__note {
-  width: 280px;
+  width: 300px;
   margin: 0 auto;
   padding: 22px 0 30px;
   font-weight: 300;
   line-height: 24px;
   text-align: center;
   color: @white;
+}
+
+@media (min-width: 660px) {
+  .download {
+    margin-top: 0;
+    text-align: center;
+    background-color: transparent;
+    padding-bottom: 112px;
+  }
+
+  .download::before {
+    content: "";
+    position: absolute;
+    top: -168px;
+    left: -31px;
+    z-index: -1;
+    width: 660px;
+    height: 546px;
+    background-image: url("./../img/iphone-hand-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .download__note {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download {
+    min-height: 645px;
+    padding: 339px 0 0 139px;
+  }
+
+  .download::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 75px;
+    z-index: -1;
+    width: 1050px;
+    height: 645px;
+    background-image: url("./../img/iphone-hand-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .download__button {
+    font-size: 21px;
+  }
 }

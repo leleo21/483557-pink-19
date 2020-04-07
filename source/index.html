@@ -12,23 +12,25 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="logo page-header__logo">
-        <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
-      </a>
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="page-header__burger"></span>
-      </button>
+      <div class="page-header__wrapper-logo">
+        <a class="logo page-header__logo">
+          <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+        </a>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="page-header__burger"></span>
+        </button>
+      </div>
+      <!--навигация -->
+      <nav class="main-nav main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__active-link">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
+      </nav>
     </div>
-    <!--навигация -->
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__active-link">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="photo.html">Фотографии</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
-        <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-      </ul>
-    </nav>
   </header>
   <main class="page-main page-main--background">
     <h1 class="page-main__heading page-main__heading--index">Взгляните на жизнь иначе!</h1>
@@ -61,45 +63,56 @@
         </li>
         <li class="advantages__item advantages__item--world">
           <h3 class="advantages__heading">Меняет мир вокруг</h3>
-          <p class="advantages__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <p class="advantages__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbspэффект</p>
         </li>
         <li class="advantages__item advantages__item--friends">
           <h3 class="advantages__heading">Заводит новых друзей</h3>
           <p class="advantages__paragraph">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
       </ul>
     </section>
+    <section class="study study--clock-desctop">
+      <h2 class="study__title">Эффект на 24 часа!</h2>
+      <p class="study__text">Британские ученые провели исследования и доказали, что положительный эффект от&nbspиспользования приложения длится целые&nbspсутки!</p>
+      <b><a class="study__link" href="#">Узнать больше об исследовании</a></b>
+    </section>
     <!--слайдер с отзывами-->
-    <section class="reviews slider">
+    <section class="reviews">
       <h2 class="visually-hidden">Отзывы</h2>
-      <div class="reviews__item slider__item">
-        <cite class="reviews__author">Николай Петров</cite>
+      <div class="reviews__item">
+        <cite class="reviews__author">Николай Петров <span class="reviews__age">25 лет, водитель трамвая</span></cite>
         <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
           в
           комментариях к выложенной фотографии!»</blockquote>
       </div>
-      <div class="reviews__item slider__item">
-        <cite class="reviews__author">Николай Петров</cite>
+      <div class="reviews__item">
+        <cite class="reviews__author">Николай Петров <span class="reviews__age">25 лет, водитель трамвая</span></cite>
         <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
           в
           комментариях к выложенной фотографии!»</blockquote>
       </div>
-      <div class="reviews__item slider__item">
-        <cite class="reviews__author">Николай Петров</cite>
+      <div class="reviews__item">
+        <cite class="reviews__author">Николай Петров <span class="reviews__age">25 лет, водитель трамвая</span></cite>
         <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
           в
           комментариях к выложенной фотографии!»</blockquote>
       </div>
-      <div class="reviews__toggles slider__toggles">
-        <button class="reviews__toggle slider__toggle reviews__toggle--active">
+      <div class="reviews__toggles">
+        <button class="reviews__toggle reviews__toggle--active">
           <span class="visually-hidden">Слайд-1</span>
         </button>
-        <button class="reviews__toggle slider__toggle">
+        <button class="reviews__toggle">
           <span class="visually-hidden">Слайд-2</span>
         </button>
-        <button class="reviews__toggle slider__toggle">
+        <button class="reviews__toggle">
           <span class="visually-hidden">Слайд-3</span>
         </button>
       </div>
+      <button class="reviews__prew">
+        <span class="visually-hidden">Предыдущий слайд</span>
+      </button>
+      <button class="reviews__next">
+        <span class="visually-hidden">Следующий слайд</span>
+      </button>
     </section>
     <!-- слайдер различия версий приложения -->
     <!-- тут будет таблица а не картинки! -->
@@ -107,6 +120,7 @@
       <h2 class="visually-hidden">Различия и стоимость приложения</h2>
       <table class="price__table">
         <tr class="price__title">
+          <th class="price__title-blog price__title-blog--column1"></th>
           <th class="price__title-blog">
             <b class="price__title-name">База</b>
             <b class="price__title-cost">1,99 USD</b>
@@ -122,21 +136,21 @@
           </th>
         <tr class="price__options">
           <td class="price__options-access price__options-access--cut">Розовый фильтр</td>
-          <td class="price__options-access price__options-access--available"><span>Розовый фильтр</span></td>
-          <td class="price__options-access price__options-access--available"><span>Розовый фильтр</span></td>
-          <td class="price__options-access price__options-access--available"><span>Розовый фильтр</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Розовый фильтр</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Розовый фильтр</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Розовый фильтр</span></td>
         </tr>
         <tr class="price__options">
           <td class="price__options-access price__options-access--cut">Смайлики</td>
-          <td class="price__options-access price__options-access--not-available"><span>Смайлики</span></td>
-          <td class="price__options-access price__options-access--available"><span>Смайлики</span></td>
-          <td class="price__options-access price__options-access--available"><span>Смайлики</span></td>
+          <td class="price__options-access price__options-access--not-available"><span class="price__options-access--paste">Смайлики</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Смайлики</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Смайлики</span></td>
         </tr>
         <tr class="price__options">
           <td class="price__options-access price__options-access--cut">Комментарии</td>
-          <td class="price__options-access price__options-access--not-available"><span>Комментарии</span></td>
-          <td class="price__options-access price__options-access--not-available"><span>Комментарии</span></td>
-          <td class="price__options-access price__options-access--available"><span>Комментарии</span></td>
+          <td class="price__options-access price__options-access--not-available"><span class="price__options-access--paste">Комментарии</span></td>
+          <td class="price__options-access price__options-access--not-available"><span class="price__options-access--paste">Комментарии</span></td>
+          <td class="price__options-access price__options-access--available"><span class="price__options-access--paste">Комментарии</span></td>
         </tr>
       </table>
       <div class="price__toggles">
@@ -220,7 +234,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

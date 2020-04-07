@@ -1,10 +1,22 @@
 .main-nav {
-  // display: none;
+  padding-top: 65px;
   font-size: 18px;
   line-height: 32px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: @dark;
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--nojs {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -29,5 +41,33 @@
 
   &:active {
     color: @pink-opac;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav {
+    width: 680px;
+    padding-top: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: transparent;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-nav__item {
+    padding: 29px 0;
+    box-shadow: none;
+
+    &--active {
+      border-bottom: 2px solid @white;
+    }
+  }
+
+  .main-nav__item-link:active {
+    color: @white-active;
   }
 }

@@ -1,6 +1,7 @@
 .price {
   position: relative;
   width: 320px;
+  margin: 0 auto;
   padding: 115px 0 98px;
   overflow: hidden;
   background-color: @grey;
@@ -20,13 +21,13 @@
 
 .price__title {
   text-align: center;
-  background-color: @dark;
   color: @white;
 }
 
 .price__title-blog {
   width: 276px;
   padding: 18px 70px;
+  background-color: @dark;
   border: 2px solid @grey;
   text-align: center;
 
@@ -125,5 +126,93 @@
 
   &:active {
     background-color: @dark-opac;
+  }
+}
+
+@media (min-width: 660px) {
+  .price {
+    width: 100%;
+    padding: 115px 0 70px;
+  }
+
+  .price__options-access {
+    width: 153px;
+    padding: 10px 0 10px 20px;
+
+    &--cut {
+      display: block;
+      text-transform: capitalize;
+      border: none;
+    }
+
+    &--paste {
+      display: none;
+    }
+
+    &--available {
+      background-position: center;
+    }
+
+    &--not-available {
+      background-position: center;
+    }
+  }
+
+  .price__table {
+    margin: 0 auto;
+    width: 612px;
+    transform: none;
+    table-layout: fixed;
+    background-color: @white;
+    border-collapse: collapse;
+  }
+
+  .price__title-blog {
+    width: 153px;
+    padding: 19px 30px 13px;
+
+    &--column1 {
+      background-color: @grey;
+      border: none;
+    }
+
+    &--hit {
+      width: 61px;
+      height: 61px;
+      background-image: url("./../img/bg-hit-tablet.svg");
+      background-repeat: no-repeat;
+      transform: translate(-30px, -18px);
+    }
+  }
+
+
+  .price__title-name {
+    font-size: 16px;
+  }
+
+  .price__title-cost {
+    font-size: 18px;
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .price__table {
+    width: 940px;
+  }
+
+  .price__title-name {
+    font-size: 18px;
+  }
+
+  .price__title-cost {
+    font-size: 24px;
+  }
+
+  .price__options-access--cut {
+    font-size: 18px;
   }
 }

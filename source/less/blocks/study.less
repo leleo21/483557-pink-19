@@ -1,0 +1,100 @@
+@media (min-width: 320px) {
+  .study {
+    display: none;
+  }
+}
+
+@media (min-width: 660px) {
+  .study {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 102px 36px 83px 320px;
+    text-align: left;
+    line-height: 24px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 238px;
+      height: 276px;
+      background-image: url("./../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 59px;
+      right: 401px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 202px;
+      height: 202px;
+      background-image: url("./../img/icon-editor-diagram-fill.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 115px;
+      right: 420px;
+    }
+  }
+
+  .study__title {
+    padding-right: 100px;
+    font-size: 30px;
+    line-height: 36px;
+    color: @black;
+  }
+
+  .study__link {
+    color: @pink;
+  }
+}
+
+@media (min-width: 1200px) {
+  .study {
+    background-color: @grey;
+    padding-left: 500px;
+
+    &--clock-desctop::before {
+      content: "";
+      position: absolute;
+      width: 298px;
+      height: 345px;
+      background-image: url("./../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 10px;
+      left: 131px;
+    }
+
+    &--clock-desctop::after {
+      content: "";
+      position: absolute;
+      width: 253px;
+      height: 253px;
+      background-image: url("./../img/icon-editor-diagram-fill.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 80px;
+      left: 153px;
+    }
+  }
+
+  .study__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .study__text {
+    width: 520px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .study__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
