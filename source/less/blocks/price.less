@@ -1,4 +1,4 @@
-.price {
+.price__container {
   position: relative;
   width: 320px;
   margin: 0 auto;
@@ -130,8 +130,8 @@
 }
 
 @media (min-width: 660px) {
-  .price {
-    width: 100%;
+  .price__container {
+    width: 660px;
     padding: 115px 0 70px;
   }
 
@@ -145,10 +145,6 @@
       border: none;
     }
 
-    &--paste {
-      display: none;
-    }
-
     &--available {
       background-position: center;
     }
@@ -156,6 +152,10 @@
     &--not-available {
       background-position: center;
     }
+  }
+
+  .price__options-mobile-only {
+    display: none;
   }
 
   .price__table {
@@ -173,7 +173,6 @@
 
     &--column1 {
       background-color: @grey;
-      border: none;
     }
 
     &--hit {
@@ -200,6 +199,10 @@
 }
 
 @media (min-width: 1200px) {
+  .price__container {
+    width: 1200px;
+  }
+
   .price__table {
     width: 940px;
   }

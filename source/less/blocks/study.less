@@ -6,14 +6,18 @@
 
 @media (min-width: 660px) {
   .study {
-    position: relative;
     display: block;
-    width: 100%;
     margin: 0 auto;
-    padding: 102px 36px 83px 320px;
     text-align: left;
     line-height: 24px;
     background-color: @white;
+  }
+
+  .study__container {
+    position: relative;
+    width: 660px;
+    margin: 0 auto;
+    padding: 102px 36px 83px 320px;
 
     &::before {
       content: "";
@@ -53,11 +57,13 @@
 }
 
 @media (min-width: 1200px) {
-  .study {
+  .study__container {
+    position: relative;
+    width: 1200px;
+    padding-left: 496px;
     background-color: @grey;
-    padding-left: 500px;
 
-    &--clock-desctop::before {
+    &::before {
       content: "";
       position: absolute;
       width: 298px;
@@ -69,7 +75,7 @@
       left: 131px;
     }
 
-    &--clock-desctop::after {
+    &::after {
       content: "";
       position: absolute;
       width: 253px;
@@ -88,7 +94,7 @@
   }
 
   .study__text {
-    width: 520px;
+    width: 530px;
     font-size: 18px;
     line-height: 30px;
   }

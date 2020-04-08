@@ -1,15 +1,16 @@
-.reviews {
-  position: relative;
+.reviews__container {
+  display: flex;
+  width: 320px;
+  overflow: hidden;
   margin: 0 auto;
   padding: 42px 0 20px;
   text-align: center;
-  display: flex;
-  overflow: hidden;
 }
 
 .reviews__item {
-  width: 276px;
-  margin-left: 20px;
+  position: relative;
+  width: 320px;
+  margin: 0 20px;
 }
 
 .reviews__author {
@@ -78,7 +79,8 @@
 }
 
 @media (min-width: 660px) {
-  .reviews {
+  .reviews__container {
+    width: 660px;
     padding: 42px 0 70px;
   }
 
@@ -108,19 +110,25 @@
 }
 
 @media (min-width: 1200px) {
-  .reviews::before {
+  .reviews__item::before {
     content: "";
     position: absolute;
     width: 79px;
-    height: 63px;
-    background-image: url("../../img/icon-quotes.svg");
+    height: 65px;
+    background-image: url("./../img/icon-quotes.svg");
     background-repeat: no-repeat;
     left: 50%;
     top: 72px;
-    margin-left: -79px;
+    margin-left: -39px;
+  }
+
+  .reviews__container {
+    position: relative;
+    width: 1200px;
   }
 
   .reviews__item {
+    width: 690px;
     margin: 0 258px;
   }
 

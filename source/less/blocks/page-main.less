@@ -1,13 +1,18 @@
 .page-main {
   position: relative;
-  top: -65px;
-  padding-top: 65px;
   text-decoration: none;
   background-color: @white;
+}
+
+.page-main__container {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 95px;
   background-image: url("./../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
 }
+
 
 .page-main__heading {
   margin: 0;
@@ -19,14 +24,16 @@
 }
 
 .page-main__heading--index {
-  padding: 25px 45px 80px;
+  padding: 0 45px 75px;
 }
 
 @media (min-width: 660px) {
-  .page-main {
+  .page-main__container {
+    width: 660px;
     background-image: url("./../img/bg-back-tablet@1x.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
   }
-
 
   .page-main__heading {
     font-size: 50px;
@@ -41,6 +48,11 @@
 
 @media (min-width: 1200px) {
   .page-main {
+    position: relative;
+  }
+
+  .page-main__container {
+    width: 1200px;
     position: relative;
     top: -90px;
     padding-top: 90px;
