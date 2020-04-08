@@ -1,7 +1,12 @@
 .download {
+  background-color: @dark;
+}
+
+.download__container {
   position: relative;
   z-index: 1;
   width: 320px;
+  margin: 0 auto;
   margin-top: 238px;
   text-align: center;
   background-color: @dark;
@@ -95,13 +100,17 @@
 
 @media (min-width: 660px) {
   .download {
-    margin-top: 0;
+    background-color: transparent;
+  }
+
+  .download__container {
+    margin: 0;
     text-align: center;
     background-color: transparent;
     padding-bottom: 112px;
   }
 
-  .download::before {
+  .download__container::before {
     content: "";
     position: absolute;
     top: -168px;
@@ -120,12 +129,12 @@
 }
 
 @media (min-width: 1200px) {
-  .download {
+  .download__container {
     min-height: 645px;
     padding: 339px 0 0 139px;
   }
 
-  .download::before {
+  .download__container::before {
     content: "";
     position: absolute;
     top: 0;
