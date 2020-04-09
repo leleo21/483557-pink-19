@@ -1250,7 +1250,8 @@ img {
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: center -9px;
+  background-position: top center;
+  background-size: contain;
 }
 .price__container {
   position: relative;
@@ -1848,10 +1849,6 @@ img {
   position: relative;
   text-align: center;
 }
-.page-footer__container {
-  width: 320px;
-  margin: 0 auto;
-}
 .footer__contacts {
   padding-top: 43px;
   font-size: 24px;
@@ -1866,7 +1863,7 @@ img {
 .page-footer__map-wrapper {
   position: relative;
   z-index: 100;
-  width: 320px;
+  width: 100%;
   height: 200px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
@@ -1876,12 +1873,15 @@ img {
 .page-footer__map-wrapper::before {
   content: "";
   position: absolute;
-  width: 320px;
+  width: 100%;
   height: 62px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: center top;
+}
+.page-footer__map {
+  width: 100%;
 }
 .page-footer__social-wrapper {
   width: 280px;
@@ -1945,9 +1945,6 @@ img {
   margin-right: 15px;
 }
 @media (min-width: 660px) {
-  .page-footer__container {
-    width: 660px;
-  }
   .footer__contacts-container {
     width: 660px;
   }
@@ -1961,7 +1958,6 @@ img {
   .page-footer__map-wrapper::before {
     content: "";
     position: absolute;
-    width: 660px;
     height: 123px;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
@@ -1970,7 +1966,6 @@ img {
     background-size: cover;
   }
   .page-footer__map {
-    width: 100%;
     height: 370px;
   }
   .page-footer__social-wrapper {
@@ -1995,9 +1990,6 @@ img {
   }
 }
 @media (min-width: 1200px) {
-  .page-footer__container {
-    width: 1200px;
-  }
   .footer__contacts-container {
     width: 1200px;
   }
@@ -2014,8 +2006,7 @@ img {
   .page-footer__map-wrapper::before {
     content: "";
     position: absolute;
-    width: 1200px;
-    height: 123px;
+    height: 140px;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-color: transparent;
@@ -2023,7 +2014,6 @@ img {
     background-size: cover;
   }
   .page-footer__map {
-    width: 100%;
     min-height: 500px;
   }
 }
@@ -2044,25 +2034,11 @@ img {
 .contest__form {
   background-color: #ffffff;
 }
-.contest__form-name-container {
-  width: 320px;
-  margin: 0 auto;
-}
 .contest__form-checkbox-container {
-  width: 320px;
-  margin: 0 auto;
-}
-.contest__form-phone-container {
-  width: 320px;
-  margin: 0 auto;
+  background-color: #f2f2f2;
 }
 .contest__form-radio-container {
-  width: 320px;
-  margin: 0 auto;
-}
-.contest__form-textarea-container {
-  width: 320px;
-  margin: 0 auto;
+  background-color: #f2f2f2;
 }
 .contest__form-item {
   padding: 34px 0 25px;
@@ -2070,9 +2046,13 @@ img {
   border: none;
 }
 .contest__form-item--checkbox {
+  margin: 0 auto;
+  width: 320px;
   background-color: #f2f2f2;
 }
 .contest__form-item--radio {
+  margin: 0 auto;
+  width: 320px;
   background-color: #f2f2f2;
 }
 .contest__form-legend {
@@ -2317,20 +2297,14 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .contest__form-name-container {
-    width: 660px;
-  }
   .contest__form-checkbox-container {
-    width: 660px;
-  }
-  .contest__form-phone-container {
-    width: 660px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background-color: #ffffff;
   }
   .contest__form-radio-container {
-    width: 660px;
-  }
-  .contest__form-textarea-container {
-    width: 660px;
+    background-color: #ffffff;
   }
   .contest__form-wrapper {
     display: -webkit-box;
@@ -2355,9 +2329,7 @@ img {
             order: 0;
   }
   .contest__form-item--checkbox {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    width: 620px;
   }
   .contest__form-item--phone {
     -webkit-box-ordinal-group: 3;
@@ -2368,6 +2340,7 @@ img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    width: 620px;
   }
   .contest__form-item--textarea {
     -webkit-box-ordinal-group: 5;
@@ -2491,6 +2464,11 @@ img {
   }
   .contest__form-item--radio {
     width: 450px;
+  }
+  .contest__form-checkbox-container {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .contest__about-wrapper--name {
     width: 450px;
