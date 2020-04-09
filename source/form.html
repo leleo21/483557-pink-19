@@ -39,16 +39,16 @@
     </div>
     <!-- блок с формой -->
     <section class="contest">
-      <div class="contest__container">
-        <h2 class="visually-hidden">Форма участия в конкурсе</h2>
-        <p class="contest__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span
-            class="contest__paragraph--cut">Пожалуйста, заполните форму ниже:</span></p>
-        <!-- форма -->
-        <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="contest__form-wrapper">
-            <!-- ФИО -->
-            <fieldset class="contest__form-item contest__form-item--name">
-              <legend class="visually-hidden"> Введите ФИО</legend>
+      <h2 class="visually-hidden">Форма участия в конкурсе</h2>
+      <p class="contest__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span
+          class="contest__paragraph--cut">Пожалуйста, заполните форму ниже:</span></p>
+      <!-- форма -->
+      <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="contest__form-wrapper">
+          <!-- ФИО -->
+          <fieldset class="contest__form-item contest__form-item--name">
+            <legend class="visually-hidden"> Введите ФИО</legend>
+            <div class="contest__form-name-container">
               <div class="contest__about-wrapper contest__about-wrapper--name">
                 <label class="contest__about-title" for="surname-field">Фамилия:</label>
                 <input class="contest__about-text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" pattern="^[А-Яа-яЁё\s]+$" required>
@@ -62,10 +62,12 @@
                 <label class="contest__about-title" for="patronymic-field">Отчество:</label>
                 <input class="contest__about-text" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
               </div>
-            </fieldset>
-            <!-- чекбоксы -->
-            <fieldset class="contest__form-item contest__form-item--checkbox">
-              <legend class="contest__form-legend contest__form-legend--checkbox">Ваши безбашенные достижения в путешествии</legend>
+            </div>
+          </fieldset>
+          <!-- чекбоксы -->
+          <fieldset class="contest__form-item contest__form-item--checkbox">
+            <legend class="contest__form-legend contest__form-legend--checkbox">Ваши безбашенные достижения в путешествии</legend>
+            <div class="contest__form-checkbox-container">
               <div class="contest__checkbox-wrapper">
                 <input class="contest__checkbox-option" type="checkbox" name="shark" id="shark-field" checked>
                 <label class="contest__checkbox-title" for="shark-field">Сделал селфи с акулой</label>
@@ -90,10 +92,12 @@
                 <input class="contest__checkbox-option" type="checkbox" name="hotel" id="hotel-field">
                 <label class="contest__checkbox-title" for="hotel-field">Разгромил отель</label>
               </div>
-            </fieldset>
-            <!-- телефон, email -->
-            <fieldset class="contest__form-item contest__form-item--phone">
-              <legend class="contest__form-legend contest__form-legend--show">Контактная информация</legend>
+            </div>
+          </fieldset>
+          <!-- телефон, email -->
+          <fieldset class="contest__form-item contest__form-item--phone">
+            <legend class="contest__form-legend contest__form-legend--show">Контактная информация</legend>
+            <div class="contest__form-phone-container">
               <div class="contest__about-wrapper contest__about-wrapper--contacts contest__about-wrapper--contacts contest__about-wrapper--phone">
                 <label class="contest__about-title" for="tel-field">Номер телефона</label>
                 <input class="contest__about-text" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
@@ -102,10 +106,12 @@
                 <label class="contest__about-title" for="email-field">Адрес почты</label>
                 <input class="contest__about-text" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
               </div>
-            </fieldset>
-            <!-- радиокнопки -->
-            <fieldset class="contest__form-item contest__form-item--radio">
-              <legend class="contest__form-legend contest__form-legend--checkbox">С каким приложением путешествовали?</legend>
+            </div>
+          </fieldset>
+          <!-- радиокнопки -->
+          <fieldset class="contest__form-item contest__form-item--radio">
+            <legend class="contest__form-legend contest__form-legend--checkbox">С каким приложением путешествовали?</legend>
+            <div class="contest__form-radio-container">
               <div class="contest__radio-wrapper">
                 <input class="contest__radio-option" type="radio" name="os" id="apple-field" value="ios" checked>
                 <label class="contest__radio-title" for="apple-field">Pink для iOS</label>
@@ -118,17 +124,21 @@
                 <input class="contest__radio-option" type="radio" name="os" id="windows-field" value="windows">
                 <label class="contest__radio-title" for="windows-field">Windows Phone</label>
               </div>
-            </fieldset>
-            <!-- Тектовое поле -->
-            <fieldset class="contest__form-item contest__form-item--textarea">
-              <legend class="contest__form-legend">Опишите свои эмоции</legend>
+            </div>
+          </fieldset>
+          <!-- Тектовое поле -->
+          <fieldset class="contest__form-item contest__form-item--textarea">
+            <legend class="contest__form-legend contest__form-legend--textarea">Опишите свои эмоции</legend>
+            <div class="contest__form-textarea-container">
               <div class="contest__about-wrapper">
                 <label class="visually-hidden" for="textarea">Текст письма:</label>
                 <textarea class="contest__about-textarea" name="text" id="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </div>
-            </fieldset>
-          </div>
-          <!-- кнопка отправки формы -->
+            </div>
+          </fieldset>
+        </div>
+        <!-- кнопка отправки формы -->
+        <div class="contest__form-button-container">
           <div class="contest__wrapper-btn-note">
             <button class="btn contest__form-btn" type="submit">Отправить форму</button>
             <div class="contest__form-footnote">
@@ -136,8 +146,8 @@
               <b class="contest__form-note"> — обязательные поля</b>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
   </main>
   <!-- подвал-->

@@ -1,14 +1,19 @@
 .page-main {
   position: relative;
   text-decoration: none;
-  background-color: @white;
   margin: 0 auto;
-  padding-top: 95px;
   background-image: url("./../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-color: @dark;
 }
 
+.page-main__title {
+  color: @white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
 
 .page-main__heading {
   margin: 0;
@@ -19,9 +24,26 @@
   color: @white;
 }
 
-.page-main__heading--index {
-  padding: 0 45px 75px;
+.page-main__container {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 95px;
+
+  &--index::before {
+    content: "";
+    position: absolute;
+    top: 176px;
+    left: -30px;
+    display: block;
+    width: 100%;
+    height: 314px;
+    background-image: url("./../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
+
 
 @media (min-width: 660px) {
   .page-main {
@@ -31,8 +53,26 @@
   }
 
   .page-main__container {
-    width: 660px;
+    width: 640px;
     margin: 0 auto;
+
+    &--index::before {
+      content: "";
+      position: absolute;
+      top: 124px;
+      z-index: 0;
+      display: block;
+      width: 100%;
+      height: 545px;
+      background-image: url("./../img/iphone-hand-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
+
+  .page-main__title {
+    margin-right: 396px;
+    font-size: 40px;
   }
 
   .page-main__heading {
@@ -56,13 +96,24 @@
   .page-main__container {
     width: 1200px;
     position: relative;
-    top: -90px;
-    padding-top: 90px;
     background-image: none;
+
+    &--index::before {
+      content: "";
+      position: absolute;
+      top: 195px;
+      left: 150px;
+      width: 1050px;
+      height: 645px;
+      background-image: url("./../img/iphone-hand-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
   }
 
-  .page-main__heading--index {
-    padding: 0 720px 0 59px;
+  .page-main__title {
+    width: 300px;
+    margin-left: 125px;
     font-size: 50px;
   }
 }
