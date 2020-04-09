@@ -19,29 +19,14 @@
   background-color: @white;
 }
 
-.contest__form-name-container {
-  width: 320px;
-  margin: 0 auto;
-}
 
 .contest__form-checkbox-container {
-  width: 320px;
-  margin: 0 auto;
+  background-color: @grey;
 }
 
-.contest__form-phone-container {
-  width: 320px;
-  margin: 0 auto;
-}
 
 .contest__form-radio-container {
-  width: 320px;
-  margin: 0 auto;
-}
-
-.contest__form-textarea-container {
-  width: 320px;
-  margin: 0 auto;
+  background-color: @grey;
 }
 
 .contest__form-item {
@@ -50,10 +35,14 @@
   border: none;
 
   &--checkbox {
+    margin: 0 auto;
+    width: 320px;
     background-color: @grey;
   }
 
   &--radio {
+    margin: 0 auto;
+    width: 320px;
     background-color: @grey;
   }
 }
@@ -302,24 +291,13 @@
     flex-direction: column;
   }
 
-  .contest__form-name-container {
-    width: 660px;
-  }
-
   .contest__form-checkbox-container {
-    width: 660px;
-  }
-
-  .contest__form-phone-container {
-    width: 660px;
+    order: 3;
+    background-color: @white;
   }
 
   .contest__form-radio-container {
-    width: 660px;
-  }
-
-  .contest__form-textarea-container {
-    width: 660px;
+    background-color: @white;
   }
 
   .contest__form-wrapper {
@@ -341,7 +319,7 @@
     }
 
     &--checkbox {
-      order: 3;
+      width: 620px;
     }
 
     &--phone {
@@ -350,6 +328,7 @@
 
     &--padio {
       order: 1;
+      width: 620px;
     }
 
     &--textarea {
@@ -472,6 +451,10 @@
     &--radio {
       width: 450px;
     }
+  }
+
+  .contest__form-checkbox-container {
+    order: 3;
   }
 
   .contest__about-wrapper--name {
