@@ -41,22 +41,24 @@
 .upgrade__btn-custom {
   width: 48px;
   height: 46px;
+  padding: 0;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
 
-  &--size {
-    background-image: url("./../img/icon-editor-crop.svg");
+.upgrade__svg {
+  opacity: 0.3;
+  fill: @dark;
+
+  &:hover {
+    opacity: 0.5;
   }
 
-  &--fill {
-    background-image: url("./../img/icon-editor-fill.svg");
-  }
-
-  &--contrast {
-    background-image: url("./../img/icon-editor-contrast.svg");
-    background-position: 50% 50%;
+  &:active {
+    fill: @pink;
+    opacity: 1;
   }
 }
 
@@ -194,6 +196,20 @@
     background-size: cover;
   }
 
+  .upgrade__svg {
+    width: 22px;
+    height: 22px;
+
+    &--fill {
+      width: 24px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   .upgrade__range-block {
     position: relative;
     width: 202px;
@@ -226,6 +242,21 @@
     width: 44px;
     height: 44px;
     background-size: cover;
+  }
+
+  .upgrade__svg {
+    width: 44px;
+    height: 44px;
+
+    &--fill {
+      width: 48px;
+      height: 43px;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   .upgrade__btn-form-wrapper {

@@ -162,12 +162,21 @@
     height: 41px;
     left: 130px;
     top: 50%;
+    opacity: 0.3;
     background-color: transparent;
     background-image: url("./../img/icon-review-arrow-left.svg");
     background-position: center;
     background-size: cover;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   .reviews__next {
@@ -177,12 +186,21 @@
     height: 41px;
     right: 130px;
     top: 50%;
+    opacity: 0.3;
     background-color: transparent;
     background-image: url("./../img/icon-review-arrow-right.svg");
     background-position: center;
     background-size: cover;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
 
