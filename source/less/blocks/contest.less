@@ -37,13 +37,19 @@
   &--checkbox {
     margin: 0 auto;
     width: 320px;
+    padding-bottom: 0;
     background-color: @grey;
   }
 
   &--radio {
     margin: 0 auto;
     width: 320px;
+    padding-bottom: 0;
     background-color: @grey;
+  }
+
+  &--textarea {
+    padding-top: 16px;
   }
 }
 
@@ -57,7 +63,18 @@
   background-color: @white;
 
   &--checkbox {
+    padding: 38px 40px 8px;
     background-color: @grey;
+  }
+
+  &--radio {
+    background-color: #f2f2f2;
+    padding: 36px 40px 5px;
+  }
+
+  &--textarea {
+    padding: 0;
+    padding-top: 40px;
   }
 
   &--show {
@@ -82,10 +99,7 @@
 
 .contest__about-text {
   width: 276px;
-  padding-top: 15px;
-  padding-left: 21px;
-  padding-bottom: 15px;
-  padding-right: 21px;
+  padding: 15px 20px;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @input-brdr-clr;
@@ -105,8 +119,12 @@
 }
 
 .contest__checkbox-wrapper {
-  padding: 0 22px 45px;
+  padding: 0 22px 52px;
   background-color: @grey;
+
+  &:last-of-type {
+    padding-bottom: 47px;
+  }
 }
 
 .contest__checkbox-title {
@@ -123,7 +141,7 @@
 .contest__checkbox-option:not(:checked) + .contest__checkbox-title {
   position: relative;
   display: inline-block;
-  padding-left: 60px;
+  padding-left: 66px;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -132,10 +150,10 @@
 .contest__checkbox-option:not(:checked) + .contest__checkbox-title::before {
   content: "";
   position: absolute;
-  left: -1px;
-  top: -5px;
-  width: 35px;
-  height: 35px;
+  left: -3px;
+  top: -4px;
+  width: 39px;
+  height: 39px;
   background-repeat: no-repeat;
   border: 2px solid @input-brdr-clr;
   background-color: @white;
@@ -168,7 +186,7 @@
 .contest__radio-option:not(:checked) + .contest__radio-title {
   position: relative;
   display: inline-block;
-  padding-left: 60px;
+  padding-left: 67px;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -177,10 +195,10 @@
 .contest__radio-option:not(:checked) + .contest__radio-title::before {
   content: "";
   position: absolute;
-  left: -1px;
-  top: -5px;
-  width: 37px;
-  height: 36px;
+  left: -2px;
+  top: -4px;
+  width: 39px;
+  height: 39px;
   background-repeat: no-repeat;
   background-color: @white;
   border: 2px solid @input-brdr-clr;
@@ -207,9 +225,9 @@
 }
 
 .contest__about-textarea {
-  width: 276px;
-  min-height: 197px;
-  padding: 23px 21px;
+  width: 280px;
+  min-height: 201px;
+  padding: 15px 17px;
   margin-bottom: 29px;
   font-size: 18px;
   line-height: 30px;
@@ -237,7 +255,7 @@
 
 .contest__form-btn {
   width: 276px;
-  margin: 50px 22px 44px;
+  margin: 3px 22px 35px;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 700;
@@ -265,7 +283,7 @@
 }
 
 .contest__form-footnote {
-  margin-bottom: 64px;
+  margin-bottom: 15px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -277,7 +295,7 @@
 
 @media (min-width: 660px) {
   .contest__paragraph {
-    padding: 100px 0 76px;
+    padding: 95px 0 40px;
     width: 500px;
     font-size: 18px;
 
@@ -314,8 +332,9 @@
     border: 2px solid @grey;
 
     &--name {
-      border: none;
       order: 0;
+      margin: 0 auto;
+      border: none;
     }
 
     &--checkbox {
@@ -324,6 +343,7 @@
 
     &--phone {
       order: 2;
+      margin: 0 auto;
     }
 
     &--padio {
@@ -351,7 +371,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 51px;
 
     &--contacts {
       position: relative;
@@ -390,6 +410,7 @@
   }
 
   .contest__about-title {
+    margin-bottom: 0;
     padding: 0;
     padding-right: 20px;
   }

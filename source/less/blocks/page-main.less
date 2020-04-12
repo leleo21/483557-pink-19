@@ -4,11 +4,12 @@
   margin: 0 auto;
   background-image: url("./../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center -66px;
   background-color: @dark;
 }
 
 .page-main__title {
+  margin: 0;
   color: @white;
   font-size: 24px;
   font-weight: 300;
@@ -17,7 +18,7 @@
 
 .page-main__heading {
   margin: 0;
-  padding: 31px 45px 86px;
+  padding: 31px 25px 59px;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -28,12 +29,15 @@
   position: relative;
   width: 280px;
   margin: 0 auto;
-  padding-top: 95px;
+
+  &--index {
+    padding-top: 24px;
+  }
 
   &--index::before {
     content: "";
     position: absolute;
-    top: 176px;
+    top: 110px;
     left: -30px;
     display: block;
     width: 100%;
@@ -48,18 +52,20 @@
 @media (min-width: 660px) {
   .page-main {
     background-image: url("./../img/bg-back-tablet@1x.jpg");
-    background-position: center top;
+    background-position: center -111px;
     background-repeat: no-repeat;
   }
 
   .page-main__container {
     width: 640px;
     margin: 0 auto;
+    padding-top: 92px;
 
     &--index::before {
       content: "";
       position: absolute;
-      top: 124px;
+      top: 73px;
+      left: 0;
       z-index: 0;
       display: block;
       width: 100%;
@@ -71,13 +77,14 @@
   }
 
   .page-main__title {
-    margin-right: 396px;
+    margin-right: 375px;
+    padding-left: 55px;
     font-size: 40px;
   }
 
   .page-main__heading {
     font-size: 50px;
-    padding: 110px 91px 150px;
+    padding: 70px 75px 86px;
 
     &--index {
       font-size: 40px;

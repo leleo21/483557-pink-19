@@ -2,8 +2,7 @@
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+  background-position: center -9px;
 }
 
 .price__container {
@@ -51,7 +50,7 @@
   &--text {
     line-height: 21px;
     text-transform: uppercase;
-    transform: rotate(-45deg) translate(-15px, 3px);
+    transform: rotate(-45deg) translate(-22px, 1px);
     display: inline-block;
   }
 }
@@ -91,7 +90,7 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 21px;
+  padding: 12px 17px;
 }
 
 .price__image-no {
@@ -104,7 +103,7 @@
 
 .price__toggles {
   position: absolute;
-  top: 480px;
+  top: 435px;
   left: 50%;
   margin-left: -40px;
 }
@@ -141,14 +140,18 @@
 }
 
 @media (min-width: 660px) {
+  .price {
+    background-position: center -23px;
+  }
+
   .price__container {
     width: 660px;
-    padding: 115px 0 70px;
+    padding: 83px 0 65px;
   }
 
   .price__options-wrapper {
     justify-content: center;
-    padding: 15px;
+    padding: 5px;
   }
 
   .price__options-access {
@@ -184,11 +187,15 @@
   }
 
   .price__title-blog {
-    width: 153px;
-    padding: 19px 30px 13px;
+    width: 155px;
+    padding: 13px 30px 7px;
 
     &--column1 {
       background-color: @grey;
+    }
+
+    &--text {
+      transform: rotate(-45deg) translate(-14px, -2px);
     }
 
     &--hit {
@@ -196,7 +203,7 @@
       height: 61px;
       background-image: url("./../img/bg-hit-tablet.svg");
       background-repeat: no-repeat;
-      transform: translate(-30px, -18px);
+      transform: translate(-30px, -11px);
     }
   }
 
