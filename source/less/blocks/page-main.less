@@ -18,7 +18,7 @@
 
 .page-main__heading {
   margin: 0;
-  padding: 31px 25px 59px;
+  padding: 31px 25px 0;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
@@ -28,6 +28,7 @@
 .page-main__container {
   position: relative;
   width: 280px;
+  min-height: 170px;
   margin: 0 auto;
 
   &--index {
@@ -58,8 +59,8 @@
 
   .page-main__container {
     width: 640px;
+    min-height: 328px;
     margin: 0 auto;
-    padding-top: 92px;
 
     &--index::before {
       content: "";
@@ -74,6 +75,10 @@
       background-repeat: no-repeat;
       background-position: bottom center;
     }
+
+    &--index {
+      padding-top: 96px;
+    }
   }
 
   .page-main__title {
@@ -84,7 +89,7 @@
 
   .page-main__heading {
     font-size: 50px;
-    padding: 70px 75px 86px;
+    padding: 70px 75px 0;
 
     &--index {
       font-size: 40px;

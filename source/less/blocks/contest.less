@@ -311,6 +311,7 @@
 
   .contest__form-checkbox-container {
     order: 3;
+    margin-top: 57px;
     background-color: @white;
   }
 
@@ -327,18 +328,21 @@
   .contest__form-item {
     width: 620px;
     margin: 0 auto;
-    margin-bottom: 69px;
+    margin-bottom: 55px;
     background-color: @white;
     border: 2px solid @grey;
 
     &--name {
       order: 0;
       margin: 0 auto;
+      padding-bottom: 8px;
       border: none;
     }
 
     &--checkbox {
       width: 620px;
+      padding-top: 50px;
+      padding-bottom: 10px;
     }
 
     &--phone {
@@ -346,13 +350,16 @@
       margin: 0 auto;
     }
 
-    &--padio {
-      order: 1;
+    &--radio {
+      order: -1;
       width: 620px;
+      padding-bottom: 30px;
     }
 
     &--textarea {
       order: 4;
+      padding-top: 30px;
+      padding-bottom: 0;
     }
   }
 
@@ -382,7 +389,7 @@
       content: "";
       position: absolute;
       top: 1px;
-      right: 50px;
+      right: 0;
       width: 61px;
       height: 61px;
       background-image: url("./../img/icon-phone.svg");
@@ -395,13 +402,25 @@
       content: "";
       position: absolute;
       top: 1px;
-      right: 50px;
+      right: 0;
       width: 61px;
       height: 61px;
       background-image: url("./../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center center;
       background-color: @input-brdr-clr;
+    }
+
+    &--phone {
+      align-items: start;
+      width: 496px;
+      margin-bottom: 30px;
+    }
+
+    &--email {
+      align-items: start;
+      width: 496px;
+      margin-bottom: 5px;
     }
   }
 
@@ -413,10 +432,22 @@
     margin-bottom: 0;
     padding: 0;
     padding-right: 20px;
+
+    &--phone {
+      padding-top: 10px;
+    }
+
+    &--email {
+      padding-top: 10px;
+    }
   }
 
   .contest__about-text {
     width: 521px;
+
+    &--phone {
+      width: 496px;
+    }
   }
 
   .contest__checkbox-wrapper {
@@ -425,6 +456,7 @@
 
   .contest__radio-wrapper {
     background-color: @white;
+    padding: 15px 0 30px 60px;
   }
 
   .contest__about-textarea {
@@ -435,10 +467,19 @@
 
   .contest__wrapper-btn-note {
     display: flex;
-    width: 600px;
+    width: 620px;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0 auto;
+    margin: 12px auto 45px;
+  }
+
+  .contest__form-btn {
+    width: 298px;
+    margin: 0;
+  }
+
+  .contest__form-footnote {
+    width: 190px;
   }
 }
 
