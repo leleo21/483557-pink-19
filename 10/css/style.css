@@ -378,6 +378,9 @@ img {
   z-index: 1;
 }
 .page-header__wrapper-logo-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -510,6 +513,7 @@ img {
   }
 }
 .main-nav {
+  padding-top: 65px;
   font-size: 18px;
   line-height: 32px;
   font-weight: bold;
@@ -574,6 +578,7 @@ img {
   }
 }
 .page-main {
+  padding-top: 65px;
   position: relative;
   text-decoration: none;
   margin: 0 auto;
