@@ -12,11 +12,6 @@
 }
 
 .page-header__wrapper-logo-btn {
-  //
-  position: absolute;
-  top: 0;
-  left: 0;
-  //
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -140,7 +135,9 @@
 
 @media (min-width: 1200px) {
   .page-header {
-    background-color: @dark;
+    background-color: rgba(40, 54, 69, 0.7);
+    z-index: 1;
+    position: relative;
   }
 
   .page-header__toggle {
@@ -150,8 +147,9 @@
 
   .page-header__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 1000px;
-    justify-content: flex-end;
     margin: 0 auto;
   }
 
