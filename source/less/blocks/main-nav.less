@@ -45,7 +45,7 @@
 
 @media (min-width: 1200px) {
   .main-nav {
-    width: 680px;
+    width: 692px;
     padding-top: 0;
     font-weight: 400;
     text-transform: capitalize;
@@ -55,14 +55,23 @@
   .main-nav__list {
     display: flex;
     justify-content: space-around;
+    width: 694px;
   }
 
   .main-nav__item {
     padding: 29px 0;
+    line-height: 18px;
     box-shadow: none;
+    position: relative;
 
-    &--active {
-      border-bottom: 2px solid @white;
+    &--active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      height: 3px;
+      background-color: @white;
     }
   }
 
