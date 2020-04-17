@@ -15,7 +15,11 @@
     <div class="page-header__wrapper">
       <div class="page-header__wrapper-logo-btn">
         <a class="logo page-header__logo" href="index.html">
-          <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
+            <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+          </picture>
         </a>
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -47,7 +51,11 @@
             <div class="photo__label-panorama"><span class="photo__best-text">Панорама дня</span></div>
             <div class="photo__panorama">
               <a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/panorama-mobile@1x.jpg" alt="Панорама" width="320" height="137">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/panorama-desktop@1x.jpg 1x, ./img/panorama-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/panorama-tablet@1x.jpg 1x, ./img/panorama-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/panorama-mobile@1x.jpg" srcset="./img/panorama-mobile@2x.jpg 2x" alt="Панорама" width="320" height="137">
+                </picture>
               </a>
             </div>
             <div class="photo__item-wrapper photo__item-wrapper--panorama">
@@ -63,7 +71,11 @@
           </li>
           <li class="photo__item">
             <div class="photo__item-wrapper"><a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/photo-car-mobile@1x.jpg" alt="Фото белой машины" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-car-desktop@1x.jpg 1x, ./img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-car-tablet@1x.jpg 1x, ./img/photo-car-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/photo-car-mobile@1x.jpg" srcset="./img/photo-car-mobile@2x.jpg 2x" alt="Фото белой машины" width="280" height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Левон <span class="photo__time">(5 часов назад)</span></h3>
               <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -74,8 +86,14 @@
             </div>
           </li>
           <li class="photo__item">
-            <div class="photo__item-wrapper"> <a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/photo-drumset-mobile@1x.jpg" alt="фото барабанной установки" width="280" height="180">
+            <div class="photo__item-wrapper">
+              <a class="photo__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-drumset-desktop@1x.jpg 1x, ./img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-drumset-tablet@1x.jpg 1x, ./img/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/photo-drumset-mobile@1x.jpg" srcset="./img/photo-drumset-mobile@2x.jpg 2x" alt="фото барабанной установки" width="280"
+                    height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Антон <span class="photo__time">(12 часов назад)</span></h3>
               <p class="photo__comment">Соседи будут рады!</p>
@@ -89,7 +107,12 @@
           <li class="photo__item">
             <div class="photo__item-wrapper">
               <a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/photo-window-mobile@1x.jpg" alt="Фото неба сквозь стеклянную крышу" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-window-desktop@1x.jpg 1x, ./img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-window-tablet@1x.jpg 1x, ./img/photo-window-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/photo-window-mobile@1x.jpg" srcset="./img/photo-window-mobile@2x.jpg 2x" alt="Фото неба сквозь стеклянную крышу"
+                    width="280" height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Борис <span class="photo__time">(20 часов назад)</span></h3>
               <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -103,7 +126,12 @@
           <li class="photo__item">
             <div class="photo__item-wrapper">
               <a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/photo-fair-mobile@1x.jpg" alt="Фото развала с арбузами и дынями" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-fair-desktop@1x.jpg 1x, ./img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-fair-tablet@1x.jpg 1x, ./img/photo-fair-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/photo-fair-mobile@1x.jpg" srcset="./img/photo-fair-mobile@2x.jpg 2x" alt="Фото развала с арбузами и дынями" width="280"
+                    height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Сергей <span class="photo__time">(25 часов назад)</span></h3>
               <p class="photo__comment">Самая кубанская в мире!</p>
@@ -116,7 +144,12 @@
           <li class="photo__item">
             <div class="photo__item-wrapper">
               <a class="photo__link" href="#">
-                <img class="photo__link-image" src="./img/photo-pov-mobile@1x.jpg" alt="Фото человека на холме" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-pov-desktop@1x.jpg 1x, ./img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-pov-tablet@1x.jpg 1x, ./img/photo-pov-tablet@2x.jpg 2x">
+                  <img class="photo__link-image" src="./img/photo-pov-mobile@1x.jpg" srcset="./img/photo-pov-mobile@2x.jpg 2x" alt="Фото человека на холме" width="280"
+                    height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Максим <span class="photo__time">(40 часов назад)</span></h3>
               <p class="photo__comment">Где снег-то?</p>
@@ -129,7 +162,12 @@
           <li class="photo__item">
             <div class="photo__item-wrapper">
               <a class="photo__link" href="#">
-                <img class="photo__link" src="./img/photo-wing-mobile@1x.jpg" alt="Фото крыла самолета в небе" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/photo-wing-desktop@1x.jpg 1x, ./img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/photo-wing-tablet@1x.jpg 1x, ./img/photo-wing-tablet@2x.jpg 2x">
+                  <img class="photo__link" src="./img/photo-wing-mobile@1x.jpg" srcset="./img/photo-wing-mobile@2x.jpg 2x" alt="Фото крыла самолета в небе" width="280"
+                    height="180">
+                </picture>
               </a>
               <h3 class="photo__author">Надежда <span class="photo__time">(45 часов назад)</span></h3>
               <p class="photo__comment">Всем GM и взаимные лайки!</p>
@@ -153,7 +191,10 @@
         <h2 class="visually-hidden">Обработка изображений</h2>
         <!--форма обработки изображений-->
         <form class="upgrade__form" action="https://echo.htmlacademy.ru" method="get">
-          <img class="upgrade__image" src="./img/photo-road-mobile@1x.jpg" alt="Результат обработки фото" width="280" height="374">
+          <picture>
+            <source media="(min-width: 660px)" srcset="./img/photo-road-tablet@1x.jpg 1x, ./img/photo-road-tablet@2x.jpg 2x">
+            <img class="upgrade__image" src="./img/photo-road-mobile@1x.jpg" srcset="./img/photo-road-mobile@2x.jpg 2x" alt="Результат обработки фото" width="280" height="374">
+          </picture>
           <div class="upgrade__instruments">
             <div class="upgrade__custom-wrapper">
               <div class="upgrade__btn-custom-wrapper">
@@ -224,7 +265,11 @@
   <footer class="page-footer">
     <div class="page-footer__social-wrapper">
       <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <img class="logo__image page-footer__logo" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Pink" width="147" height="40">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-pink-blue-desktop.svg">
+          <source media="(min-width: 660px)" srcset="./img/logo-pink-blue-mobile.svg">
+          <img class="logo__image page-footer__logo" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Pink" width="147" height="40">
+        </picture>
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__item">

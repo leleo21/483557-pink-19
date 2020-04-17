@@ -15,7 +15,11 @@
     <div class="page-header__wrapper">
       <div class="page-header__wrapper-logo-btn">
         <a class="logo page-header__logo" href="index.html">
-          <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
+            <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+          </picture>
         </a>
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -156,7 +160,11 @@
   <footer class="page-footer">
     <div class="page-footer__social-wrapper">
       <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <img class="logo__image page-footer__logo" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Pink" width="147" height="40">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-pink-blue-desktop.svg">
+          <source media="(min-width: 660px)" srcset="./img/logo-pink-blue-mobile.svg">
+          <img class="logo__image page-footer__logo" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Pink" width="147" height="40">
+        </picture>
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__item">
