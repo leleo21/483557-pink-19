@@ -27,6 +27,11 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("./../img/bg-map-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -129,6 +134,11 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("./../img/bg-map-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -182,6 +192,11 @@
     background-image: url("./../img/bg-map-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("./../img/bg-map-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
 
     &::before {
       content: "";
