@@ -88,7 +88,7 @@
   // local object for method references and testing exposure
   var pf = {};
   var isSupportTestReady = false;
-  var noop = function () { };
+  var noop = function () {};
   var image = document.createElement("img");
   var getImgAttr = image.getAttribute;
   var setImgAttr = image.setAttribute;
@@ -109,9 +109,9 @@
   var regWDesc = /\s+\+?\d+(e\d+)?w/;
   var regSize = /(\([^)]+\))?\s*(.+)/;
   var setOptions = window.picturefillCFG;
-	/**
-	 * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-	 */
+  /**
+   * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+   */
   // baseStyle also used by getEmValue (i.e.: width: 1em is important)
   var baseStyle = "position:absolute;left:0;visibility:hidden;display:block;padding:0;border:none;font-size:1em;width:1em;overflow:hidden;clip:rect(0px, 0px, 0px, 0px)";
   var fsCss = "font-size:100%!important;";
@@ -125,10 +125,10 @@
     "in": 96
   };
   var anchor = document.createElement("a");
-	/**
-	 * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
-	 * @type {boolean}
-	 */
+  /**
+   * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
+   * @type {boolean}
+   */
   var alreadyRun = false;
 
   // Reusable, non-"g" Regexes
@@ -155,9 +155,9 @@
     }
   };
 
-	/**
-	 * simple memoize function:
-	 */
+  /**
+   * simple memoize function:
+   */
 
   var memoize = function (fn) {
     var cache = {};
@@ -178,21 +178,23 @@
       c === "\u0009" || // horizontal tab
       c === "\u000A" || // new line
       c === "\u000C" || // form feed
-      c === "\u000D");  // carriage return
+      c === "\u000D"); // carriage return
   }
 
-	/**
-	 * gets a mediaquery and returns a boolean or gets a css length and returns a number
-	 * @param css mediaqueries or css length
-	 * @returns {boolean|number}
-	 *
-	 * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
-	 */
+  /**
+   * gets a mediaquery and returns a boolean or gets a css length and returns a number
+   * @param css mediaqueries or css length
+   * @returns {boolean|number}
+   *
+   * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
+   */
   var evalCSS = (function () {
 
     var regLength = /^([\d\.]+)(em|vw|px)$/;
     var replace = function () {
-      var args = arguments, index = 0, string = args[0];
+      var args = arguments,
+        index = 0,
+        string = args[0];
       while (++index in args) {
         string = string.replace(args[index], args[++index]);
       }
@@ -234,7 +236,7 @@
           /*jshint evil:true */
           try {
             cssCache[css] = new Function("e", buildStr(css))(units);
-          } catch (e) { }
+          } catch (e) {}
           /*jshint evil:false */
         }
       }
@@ -252,13 +254,15 @@
     return candidate;
   };
 
-	/**
-	 *
-	 * @param opt
-	 */
+  /**
+   *
+   * @param opt
+   */
   var picturefill = function (opt) {
 
-    if (!isSupportTestReady) { return; }
+    if (!isSupportTestReady) {
+      return;
+    }
 
     var elements, i, plen;
 
@@ -289,17 +293,16 @@
     }
   };
 
-	/**
-	 * outputs a warning for the developer
-	 * @param {message}
-	 * @type {Function}
-	 */
+  /**
+   * outputs a warning for the developer
+   * @param {message}
+   * @type {Function}
+   */
   warn = (window.console && console.warn) ?
     function (message) {
       console.warn(message);
     } :
-    noop
-    ;
+    noop;
 
   if (!(curSrcProp in image)) {
     curSrcProp = "src";
@@ -329,9 +332,9 @@
   // test svg support
   types["image/svg+xml"] = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
 
-	/**
-	 * updates the internal vW property with the current viewport width in px
-	 */
+  /**
+   * updates the internal vW property with the current viewport width in px
+   */
   function updateMetrics() {
 
     isVwDirty = false;
@@ -460,15 +463,15 @@
     }
   }
 
-	/**
-	 * Srcset Parser
-	 * By Alex Bell |  MIT License
-	 *
-	 * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
-	 *
-	 * Based super duper closely on the reference algorithm at:
-	 * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
-	 */
+  /**
+   * Srcset Parser
+   * By Alex Bell |  MIT License
+   *
+   * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
+   *
+   * Based super duper closely on the reference algorithm at:
+   * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
+   */
 
   // 1. Let input be the value passed to this algorithm.
   // (TO-DO : Explain what "set" argument is here. Maybe choose a more
@@ -501,10 +504,10 @@
       // 3. Let candidates be an initially empty source set.
       candidates = [];
 
-		/**
-		* Adds descriptor properties to a candidate, pushes to the candidates array
-		* @return undefined
-		*/
+    /**
+     * Adds descriptor properties to a candidate, pushes to the candidates array
+     * @return undefined
+     */
     // (Declared outside of the while loop so that it's only created once.
     // (This fn is defined before it is used, in order to pass JSHINT.
     // Unfortunately this breaks the sequencing of the spec comments. :/ )
@@ -535,12 +538,18 @@
         if (regexNonNegativeInteger.test(value) && (lastChar === "w")) {
 
           // If width and density are not both absent, then let error be yes.
-          if (w || d) { pError = true; }
+          if (w || d) {
+            pError = true;
+          }
 
           // Apply the rules for parsing non-negative integers to the descriptor.
           // If the result is zero, let error be yes.
           // Otherwise, let width be the result.
-          if (intVal === 0) { pError = true; } else { w = intVal; }
+          if (intVal === 0) {
+            pError = true;
+          } else {
+            w = intVal;
+          }
 
           // If the descriptor consists of a valid floating-point number followed by
           // a U+0078 LATIN SMALL LETTER X character
@@ -548,27 +557,41 @@
 
           // If width, density and future-compat-h are not all absent, then let error
           // be yes.
-          if (w || d || h) { pError = true; }
+          if (w || d || h) {
+            pError = true;
+          }
 
           // Apply the rules for parsing floating-point number values to the descriptor.
           // If the result is less than zero, let error be yes. Otherwise, let density
           // be the result.
-          if (floatVal < 0) { pError = true; } else { d = floatVal; }
+          if (floatVal < 0) {
+            pError = true;
+          } else {
+            d = floatVal;
+          }
 
           // If the descriptor consists of a valid non-negative integer followed by
           // a U+0068 LATIN SMALL LETTER H character
         } else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
 
           // If height and density are not both absent, then let error be yes.
-          if (h || d) { pError = true; }
+          if (h || d) {
+            pError = true;
+          }
 
           // Apply the rules for parsing non-negative integers to the descriptor.
           // If the result is zero, let error be yes. Otherwise, let future-compat-h
           // be the result.
-          if (intVal === 0) { pError = true; } else { h = intVal; }
+          if (intVal === 0) {
+            pError = true;
+          } else {
+            h = intVal;
+          }
 
           // Anything else, Let error be yes.
-        } else { pError = true; }
+        } else {
+          pError = true;
+        }
       } // (close step 13 for loop)
 
       // 15. If error is still no, then append a new image source to candidates whose
@@ -577,23 +600,33 @@
       if (!pError) {
         candidate.url = url;
 
-        if (w) { candidate.w = w; }
-        if (d) { candidate.d = d; }
-        if (h) { candidate.h = h; }
-        if (!h && !d && !w) { candidate.d = 1; }
-        if (candidate.d === 1) { set.has1x = true; }
+        if (w) {
+          candidate.w = w;
+        }
+        if (d) {
+          candidate.d = d;
+        }
+        if (h) {
+          candidate.h = h;
+        }
+        if (!h && !d && !w) {
+          candidate.d = 1;
+        }
+        if (candidate.d === 1) {
+          set.has1x = true;
+        }
         candidate.set = set;
 
         candidates.push(candidate);
       }
     } // (close parseDescriptors fn)
 
-		/**
-		* Tokenizes descriptor properties prior to parsing
-		* Returns undefined.
-		* (Again, this fn is defined before it is used, in order to pass JSHINT.
-		* Unfortunately this breaks the logical sequencing of the spec comments. :/ )
-		*/
+    /**
+     * Tokenizes descriptor properties prior to parsing
+     * Returns undefined.
+     * (Again, this fn is defined before it is used, in order to pass JSHINT.
+     * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
+     */
     function tokenize() {
 
       // 8.1. Descriptor tokeniser: Skip whitespace
@@ -750,32 +783,32 @@
     } // (Close of big while loop.)
   }
 
-	/*
-	 * Sizes Parser
-	 *
-	 * By Alex Bell |  MIT License
-	 *
-	 * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
-	 *
-	 * Reference algorithm at:
-	 * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
-	 *
-	 * Most comments are copied in directly from the spec
-	 * (except for comments in parens).
-	 *
-	 * Grammar is:
-	 * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
-	 * <source-size> = <media-condition> <source-size-value>
-	 * <source-size-value> = <length>
-	 * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
-	 *
-	 * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
-	 * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
-	 *
-	 * Returns the first valid <css-length> with a media condition that evaluates to true,
-	 * or "100vw" if all valid media conditions evaluate to false.
-	 *
-	 */
+  /*
+   * Sizes Parser
+   *
+   * By Alex Bell |  MIT License
+   *
+   * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
+   *
+   * Reference algorithm at:
+   * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
+   *
+   * Most comments are copied in directly from the spec
+   * (except for comments in parens).
+   *
+   * Grammar is:
+   * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
+   * <source-size> = <media-condition> <source-size-value>
+   * <source-size-value> = <length>
+   * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
+   *
+   * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
+   * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
+   *
+   * Returns the first valid <css-length> with a media condition that evaluates to true,
+   * or "100vw" if all valid media conditions evaluate to false.
+   *
+   */
 
   function parseSizes(strValue) {
 
@@ -884,12 +917,18 @@
     }
 
     function isValidNonNegativeSourceSizeValue(s) {
-      if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) { return true; }
-      if (regexCssCalc.test(s)) { return true; }
+      if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) {
+        return true;
+      }
+      if (regexCssCalc.test(s)) {
+        return true;
+      }
       // ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
       // "-0 is equivalent to 0 and is not a negative number." which means that
       // unitless zero and unitless negative zero must be accepted as special cases.)
-      if ((s === "0") || (s === "-0") || (s === "+0")) { return true; }
+      if ((s === "0") || (s === "-0") || (s === "+0")) {
+        return true;
+      }
       return false;
     }
 
@@ -1015,9 +1054,9 @@
   pf.sel = pf.selShort;
   pf.cfg = cfg;
 
-	/**
-	 * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
-	 */
+  /**
+   * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
+   */
   pf.DPR = (DPR || 1);
   pf.u = units;
 
@@ -1026,33 +1065,33 @@
 
   pf.setSize = noop;
 
-	/**
-	 * Gets a string and returns the absolute URL
-	 * @param src
-	 * @returns {String} absolute URL
-	 */
+  /**
+   * Gets a string and returns the absolute URL
+   * @param src
+   * @returns {String} absolute URL
+   */
 
   pf.makeUrl = memoize(function (src) {
     anchor.href = src;
     return anchor.href;
   });
 
-	/**
-	 * Gets a DOM element or document and a selctor and returns the found matches
-	 * Can be extended with jQuery/Sizzle for IE7 support
-	 * @param context
-	 * @param sel
-	 * @returns {NodeList|Array}
-	 */
+  /**
+   * Gets a DOM element or document and a selctor and returns the found matches
+   * Can be extended with jQuery/Sizzle for IE7 support
+   * @param context
+   * @param sel
+   * @returns {NodeList|Array}
+   */
   pf.qsa = function (context, sel) {
     return ("querySelector" in context) ? context.querySelectorAll(sel) : [];
   };
 
-	/**
-	 * Shortcut method for matchMedia ( for easy overriding in tests )
-	 * wether native or pf.mMQ is used will be decided lazy on first call
-	 * @returns {boolean}
-	 */
+  /**
+   * Shortcut method for matchMedia ( for easy overriding in tests )
+   * wether native or pf.mMQ is used will be decided lazy on first call
+   * @returns {boolean}
+   */
   pf.matchesMedia = function () {
     if (window.matchMedia && (matchMedia("(min-width: 0.1em)") || {}).matches) {
       pf.matchesMedia = function (media) {
@@ -1065,25 +1104,25 @@
     return pf.matchesMedia.apply(this, arguments);
   };
 
-	/**
-	 * A simplified matchMedia implementation for IE8 and IE9
-	 * handles only min-width/max-width with px or em values
-	 * @param media
-	 * @returns {boolean}
-	 */
+  /**
+   * A simplified matchMedia implementation for IE8 and IE9
+   * handles only min-width/max-width with px or em values
+   * @param media
+   * @returns {boolean}
+   */
   pf.mMQ = function (media) {
     return media ? evalCSS(media) : true;
   };
 
-	/**
-	 * Returns the calculated length in css pixel from the given sourceSizeValue
-	 * http://dev.w3.org/csswg/css-values-3/#length-value
-	 * intended Spec mismatches:
-	 * * Does not check for invalid use of CSS functions
-	 * * Does handle a computed length of 0 the same as a negative and therefore invalid value
-	 * @param sourceSizeValue
-	 * @returns {Number}
-	 */
+  /**
+   * Returns the calculated length in css pixel from the given sourceSizeValue
+   * http://dev.w3.org/csswg/css-values-3/#length-value
+   * intended Spec mismatches:
+   * * Does not check for invalid use of CSS functions
+   * * Does handle a computed length of 0 the same as a negative and therefore invalid value
+   * @param sourceSizeValue
+   * @returns {Number}
+   */
   pf.calcLength = function (sourceSizeValue) {
 
     var value = evalCSS(sourceSizeValue, true) || false;
@@ -1094,19 +1133,19 @@
     return value;
   };
 
-	/**
-	 * Takes a type string and checks if its supported
-	 */
+  /**
+   * Takes a type string and checks if its supported
+   */
 
   pf.supportsType = function (type) {
     return (type) ? types[type] : true;
   };
 
-	/**
-	 * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
-	 * @param sourceSizeStr
-	 * @returns {*}
-	 */
+  /**
+   * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
+   * @param sourceSizeStr
+   * @returns {*}
+   */
   pf.parseSize = memoize(function (sourceSizeStr) {
     var match = (sourceSizeStr || "").match(regSize);
     return {
@@ -1122,11 +1161,11 @@
     return set.cands;
   };
 
-	/**
-	 * returns 1em in css px for html/body default size
-	 * function taken from respondjs
-	 * @returns {*|number}
-	 */
+  /**
+   * returns 1em in css px for html/body default size
+   * function taken from respondjs
+   * @returns {*|number}
+   */
   pf.getEmValue = function () {
     var body;
     if (!eminpx && (body = document.body)) {
@@ -1156,9 +1195,9 @@
     return eminpx || 16;
   };
 
-	/**
-	 * Takes a string of sizes and returns the width in pixels as a number
-	 */
+  /**
+   * Takes a string of sizes and returns the width in pixels as a number
+   */
   pf.calcListLength = function (sourceSizeListStr) {
     // Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
     //
@@ -1172,16 +1211,16 @@
     return sizeLengthCache[sourceSizeListStr];
   };
 
-	/**
-	 * Takes a candidate object with a srcset property in the form of url/
-	 * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
-	 *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
-	 *     "images/pic-small.png"
-	 * Get an array of image candidates in the form of
-	 *      {url: "/foo/bar.png", resolution: 1}
-	 * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
-	 * If sizes is specified, res is calculated
-	 */
+  /**
+   * Takes a candidate object with a srcset property in the form of url/
+   * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
+   *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
+   *     "images/pic-small.png"
+   * Get an array of image candidates in the form of
+   *      {url: "/foo/bar.png", resolution: 1}
+   * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
+   * If sizes is specified, res is calculated
+   */
   pf.setRes = function (set) {
     var candidates;
     if (set) {
@@ -1198,7 +1237,9 @@
   pf.setRes.res = setResolution;
 
   pf.applySetCandidate = function (candidates, img) {
-    if (!candidates.length) { return; }
+    if (!candidates.length) {
+      return;
+    }
     var candidate,
       i,
       j,
@@ -1514,7 +1555,9 @@
       } else {
         cfg[name] = args[0];
         if (alreadyRun) {
-          pf.fillImgs({ reselect: true });
+          pf.fillImgs({
+            reselect: true
+          });
         }
       }
     }
@@ -1533,7 +1576,9 @@
     module.exports = picturefill;
   } else if (typeof define === "function" && define.amd) {
     // AMD support
-    define("picturefill", function () { return picturefill; });
+    define("picturefill", function () {
+      return picturefill;
+    });
   }
 
   // IE8 evals this sync, so it must be the last thing we do
