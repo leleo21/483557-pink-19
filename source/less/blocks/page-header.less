@@ -26,6 +26,14 @@
   width: 75px;
   height: 22px;
   margin-left: 20px;
+  fill: tomato;
+}
+
+.page-header__logo-icon {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .page-header__toggle {
@@ -137,6 +145,17 @@
     width: 147px;
     height: 40px;
   }
+
+  .page-header__logo-icon {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -163,5 +182,16 @@
     width: 147px;
     text-align: center;
     background-color: transparent;
+  }
+
+  .page-header__logo-icon {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 }
