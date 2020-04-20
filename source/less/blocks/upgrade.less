@@ -49,17 +49,18 @@
 }
 
 .upgrade__svg {
-  opacity: 0.3;
   fill: @dark;
+  opacity: 0.3;
+}
 
-  &:hover {
-    opacity: 0.5;
-  }
+.upgrade__btn-custom:hover .upgrade__svg,
+.upgrade__btn-custom:focus .upgrade__svg {
+  opacity: 0.5;
+}
 
-  &:active {
-    fill: @pink;
-    opacity: 1;
-  }
+.upgrade__btn-custom:active .upgrade__svg {
+  fill: @pink;
+  opacity: 1;
 }
 
 .upgrade__range-block {
@@ -126,7 +127,8 @@
   border-radius: 40px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @pink;
     color: @white;
   }
@@ -141,7 +143,8 @@
     border: 3px solid @dark-opac;
   }
 
-  &--cancel:hover {
+  &--cancel:hover,
+  &--cancel:focus {
     background-color: transparent;
     opacity: 0.3;
     color: @dark;

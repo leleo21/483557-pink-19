@@ -27,8 +27,7 @@
   background-position: center;
   background-size: cover;
 
-  @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("./../img/bg-map-mobile@2x.jpg");
     background-size: 100% auto;
   }
@@ -59,9 +58,12 @@
   }
 }
 
-.page-footer__logo-icon {
-  &--desktop {
-    display: none;
+.page-footer__icon {
+  display: none;
+
+  &--glasses-mobile,
+  &--text {
+    display: block;
   }
 }
 
@@ -85,8 +87,10 @@
   background-color: transparent;
   border-radius: 50%;
   border: 3px solid @dark-opac;
+  fill: @pink;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 3px solid @dark;
   }
 
@@ -115,7 +119,8 @@
 .page-footer__copyright-academy {
   fill: @pink;
 
-  &:hover {
+  &:hover,
+  &focus {
     fill: @dark;
   }
 
@@ -141,8 +146,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("./../img/bg-map-tablet@2x.jpg");
       background-size: 100% auto;
     }
@@ -190,10 +194,13 @@
     width: 940px;
   }
 
-  .page-footer__logo-icon {
+  .page-footer__icon {
     display: none;
 
-    &--desktop {
+    &--glasses-desktop,
+    &--star,
+    &--stars,
+    &--text {
       display: block;
     }
   }
@@ -209,8 +216,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("./../img/bg-map-desktop@2x.jpg");
       background-size: 100% auto;
     }

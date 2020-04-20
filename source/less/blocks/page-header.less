@@ -28,9 +28,15 @@
   margin-left: 20px;
 }
 
-.page-header__logo-icon {
-  &--tablet,
-  &--desktop {
+.page-header__logo-part {
+  width: 147px;
+  height: 40px;
+  display: block;
+
+  &--stars,
+  &--text,
+  &--glasses-desktop,
+  &--glasses-tablet {
     display: none;
   }
 }
@@ -45,7 +51,8 @@
   cursor: pointer;
 }
 
-.page-header__toggle:hover {
+.page-header__toggle:hover,
+.page-header__toggle:focus {
   .page-header__burger {
     background-color: @pink;
   }
@@ -145,13 +152,13 @@
     height: 40px;
   }
 
-  .page-header__logo-icon {
-    &--mobile,
-    &--desktop {
+  .page-header__logo-part {
+    &--mobile {
       display: none;
     }
 
-    &--tablet {
+    &--glasses-tablet,
+    &--text {
       display: block;
     }
   }
@@ -177,20 +184,20 @@
     margin: 0 auto;
   }
 
+  .page-header__logo-part {
+    &--stars,
+    &--glasses-desktop {
+      display: block;
+    }
+
+    &--glasses--tablet {
+      display: none;
+    }
+  }
+
   .page-header__wrapper-logo-btn {
     width: 147px;
     text-align: center;
     background-color: transparent;
-  }
-
-  .page-header__logo-icon {
-    &--mobile,
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
   }
 }

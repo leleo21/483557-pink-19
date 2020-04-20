@@ -1,0 +1,20 @@
+.logo[href]:hover .page-header__logo-part,
+.logo[href]:hover .page-footer__icon,
+.logo[href]:focus .page-header__logo-part,
+.logo[href]:focus .page-footer__icon {
+  fill: @pink;
+}
+
+.logo[href]:active .page-header__logo-part {
+  fill: @white-active;
+}
+
+.logo[href]:active .page-footer__icon {
+  opacity: 0.3;
+
+  &--text,
+  &--star,
+  &--stars {
+    fill: @dark;
+  }
+}
