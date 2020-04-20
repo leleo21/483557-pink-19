@@ -58,6 +58,15 @@
   }
 }
 
+.page-footer__icon {
+  display: none;
+
+  &--glasses-mobile,
+  &--text {
+    display: block;
+  }
+}
+
 .page-footer__social {
   display: flex;
   justify-content: space-between;
@@ -78,8 +87,10 @@
   background-color: transparent;
   border-radius: 50%;
   border: 3px solid @dark-opac;
+  fill: @pink;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 3px solid @dark;
   }
 
@@ -108,7 +119,8 @@
 .page-footer__copyright-academy {
   fill: @pink;
 
-  &:hover {
+  &:hover,
+  &focus {
     fill: @dark;
   }
 
@@ -180,6 +192,17 @@
 
   .page-footer__social-wrapper {
     width: 940px;
+  }
+
+  .page-footer__icon {
+    display: none;
+
+    &--glasses-desktop,
+    &--star,
+    &--stars,
+    &--text {
+      display: block;
+    }
   }
 
   .page-footer__copyright-text {
