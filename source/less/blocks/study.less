@@ -17,7 +17,7 @@
     position: relative;
     width: 660px;
     margin: 0 auto;
-    padding: 74px 36px 70px 329px;
+    padding: 72px 36px 70px 329px;
 
     &::before {
       content: "";
@@ -92,6 +92,7 @@
     position: relative;
     width: 1200px;
     padding-left: 496px;
+    padding-bottom: 112px;
     background-color: @grey;
 
     &::before {
@@ -102,38 +103,41 @@
       background-image: url("./../img/icon-timer.svg");
       background-repeat: no-repeat;
       background-size: cover;
-      top: 10px;
+      top: 26px;
       left: 131px;
     }
 
     &::after {
       content: "";
       position: absolute;
+      top: 95px;
+      left: 153px;
       width: 253px;
       height: 253px;
       background-image: url("./../img/icon-editor-diagram-fill.svg");
       background-repeat: no-repeat;
       background-size: cover;
-      top: 80px;
-      left: 153px;
     }
   }
 
   .study__time {
     position: absolute;
-    top: 100px;
+    top: 121px;
     left: 210px;
     font-size: 120px;
     line-height: 187px;
   }
 
   .study__title {
+    margin-top: 49px;
     font-size: 30px;
     line-height: 30px;
   }
 
   .study__text {
     width: 530px;
+    margin-top: 25px;
+    margin-bottom: 30px;
     font-size: 18px;
     line-height: 30px;
   }

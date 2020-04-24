@@ -136,13 +136,23 @@
 }
 
 @media (min-width: 1200px) {
+  .advantages {
+    background-position: center 324px;
+  }
+
   .advantages__container {
     width: 1200px;
+  }
+
+  .advantages__title-block {
+    padding-top: 68px;
+    padding-bottom: 32px;
   }
 
   .advantages__title {
     width: 735px;
     font-size: 50px;
+    padding-bottom: 5px;
   }
 
   .advantages__text {
@@ -157,7 +167,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 910px;
+    width: 938px;
     min-height: 420px;
     padding-top: 300px;
     margin: 0 auto;
@@ -169,15 +179,16 @@
 
   .advantages__item {
     position: relative;
-    margin: 0;
     width: 300px;
+    margin: 0;
+    padding-top: 25px;
     text-align: center;
 
     &--mood::before {
       content: "";
       position: absolute;
-      width: 300px;
-      height: 302px;
+      width: 280px;
+      height: 300px;
       top: -330px;
       left: 10px;
       background-image: url("./../img/iphone-screen-1-desktop@1x.png");
@@ -233,6 +244,7 @@
 
   .advantages__paragraph {
     width: 236px;
+    padding-top: 25px;
     font-size: 18px;
     line-height: 30px;
   }

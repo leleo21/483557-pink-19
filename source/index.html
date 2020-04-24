@@ -7,7 +7,7 @@
   <meta name="keywords" content="приложение, фото, настроение">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Pink</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -18,6 +18,9 @@
     <div class="page-header__wrapper">
       <div class="page-header__wrapper-logo-btn">
         <a class="logo page-header__logo">
+          <svg width="147px" height="40px">
+            <use xlink:href="#sprite-logo-header"></use>
+          </svg>
         </a>
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -89,7 +92,7 @@
     <section class="study study--clock-desktop">
       <div class="study__container">
         <h2 class="study__title">Эффект на&nbsp;24 часа!</h2>
-        <p class="study__text">Британские ученые провели исследования и доказали, что положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
+        <p class="study__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
         <b><a class="study__link" href="#">Узнать больше об исследовании</a></b>
         <b class="study__time">24</b>
       </div>
@@ -168,7 +171,7 @@
                 <span class="price__options-mobile-only">Розовый фильтр</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -178,7 +181,7 @@
                 <span class="price__options-mobile-only">Розовый фильтр</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -188,7 +191,7 @@
                 <span class="price__options-mobile-only">Розовый фильтр</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -201,7 +204,7 @@
                 <span class="price__options-mobile-only">Смайлики</span>
                 <span class="price__options-image">
                   <svg class="price__image-no" width="27px" height="27px">
-                    <use xlink:href="#price-image-no"></use>
+                    <use xlink:href="#sprite-icon-no"></use>
                   </svg>
                 </span>
               </p>
@@ -211,7 +214,7 @@
                 <span class="price__options-mobile-only">Смайлики</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -221,7 +224,7 @@
                 <span class="price__options-mobile-only">Смайлики</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -234,7 +237,7 @@
                 <span class="price__options-mobile-only">Комментарии</span>
                 <span class="price__options-image">
                   <svg class="price__image-no" width="27px" height="27px">
-                    <use xlink:href="#price-image-no"></use>
+                    <use xlink:href="#sprite-icon-no"></use>
                   </svg>
                 </span>
               </p>
@@ -244,7 +247,7 @@
                 <span class="price__options-mobile-only">Комментарии</span>
                 <span class="price__options-image">
                   <svg class="price__image-no" width="27px" height="27px">
-                    <use xlink:href="#price-image-no"></use>
+                    <use xlink:href="#sprite-icon-no"></use>
                   </svg>
                 </span>
               </p>
@@ -254,7 +257,7 @@
                 <span class="price__options-mobile-only">Комментарии</span>
                 <span class="price__options-image">
                   <svg class="price__image-yes" width="31px" height="21px">
-                    <use xlink:href="#price-image-yes"></use>
+                    <use xlink:href="#sprite-icon-yes"></use>
                   </svg>
                 </span>
               </p>
@@ -300,26 +303,29 @@
     </section>
     <div class="page-footer__social-wrapper page-footer__social-wrapper--cut">
       <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <svg width="147px" height="40px">
+          <use xlink:href="#sprite-logo-footer"></use>
+        </svg>
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span>
             <svg width="18px" height="15px">
-              <use xlink:href="#twitter"></use>
+              <use xlink:href="#sprite-icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--facebook" href="https://facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span>
             <svg width="9px" height="19px">
-              <use xlink:href="#facebook"></use>
+              <use xlink:href="#sprite-icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--youtube" href="https://youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span>
             <svg width="15px" height="14px">
-              <use xlink:href="#youtube"></use>
+              <use xlink:href="#sprite-icon-youtube"></use>
             </svg>
           </a>
         </li>
@@ -329,7 +335,7 @@
         <a class="page-footer__copyright-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="visually-hidden">HTML Academy</span>
           <svg width="27px" height="34px">
-            <use xlink:href="#academy-icon"></use>
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>

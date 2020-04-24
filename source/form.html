@@ -7,7 +7,7 @@
   <meta name="keywords" content="приложение, фото, настроение">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Pink конкурс</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -18,6 +18,9 @@
     <div class="page-header__wrapper">
       <div class="page-header__wrapper-logo-btn">
         <a class="logo page-header__logo" href="index.html">
+          <svg width="147px" height="40px">
+            <use xlink:href="#sprite-logo-header"></use>
+          </svg>
         </a>
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -51,16 +54,16 @@
           <fieldset class="contest__form-item contest__form-item--name">
             <legend class="visually-hidden"> Введите ФИО</legend>
             <div class="contest__about-wrapper contest__about-wrapper--name">
-              <label class="contest__about-title" for="surname-field">Фамилия:</label>
+              <label class="contest__about-title contest__about-title--name" for="surname-field">Фамилия:</label>
               <input class="contest__about-text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" pattern="^[А-Яа-яЁё\s]+$" required>
             </div>
             <div class="contest__about-wrapper contest__about-wrapper--name">
-              <label class="contest__about-title" for="name-field">Имя: </label>
+              <label class="contest__about-title contest__about-title--name" for="name-field">Имя: </label>
               <input class="contest__about-text contest__about-text--grow" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" pattern="^[А-Яа-яЁё\s]+$"
                 required>
             </div>
             <div class="contest__about-wrapper contest__about-wrapper--name">
-              <label class="contest__about-title" for="patronymic-field">Отчество:</label>
+              <label class="contest__about-title contest__about-title--name" for="patronymic-field">Отчество:</label>
               <input class="contest__about-text" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
             </div>
           </fieldset>
@@ -158,26 +161,29 @@
   <footer class="page-footer">
     <div class="page-footer__social-wrapper">
       <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <svg width="147px" height="40px">
+          <use xlink:href="#sprite-logo-footer"></use>
+        </svg>
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span>
-            <svg width="17.5px" height="14.663px">
-              <use xlink:href="./img/sprite.svg#twitter"></use>
+            <svg width="18px" height="15px">
+              <use xlink:href="#sprite-icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--facebook" href="https://facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span>
-            <svg width="8.673px" height="18.944px">
-              <use xlink:href="./img/sprite.svg#facebook"></use>
+            <svg width="9px" height="19px">
+              <use xlink:href="#sprite-icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__item">
           <a class="page-footer__link page-footer--youtube" href="https://youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span>
-            <svg width="14.64px" height="13.96px">
-              <use xlink:href="./img/sprite.svg#youtube"></use>
+            <svg width="15px" height="14px">
+              <use xlink:href="#sprite-icon-youtube"></use>
             </svg>
           </a>
         </li>
@@ -186,8 +192,8 @@
         <b class="page-footer__copyright-text">Разработано</b>
         <a class="page-footer__copyright-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="visually-hidden">HTML Academy</span>
-          <svg width="26.943px" height="34.09px">
-            <use xlink:href="./img/sprite.svg#academy-icon"></use>
+          <svg width="27px" height="34px">
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>

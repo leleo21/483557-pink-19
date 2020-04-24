@@ -34,6 +34,7 @@ gulp.task("css", function () {
 gulp.task("server", function () {
   server.init({
     server: "build/",
+    browser: "google chrome",
     notify: false,
     open: true,
     cors: true,
@@ -42,7 +43,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/sprite-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/*.html"), gulp.series("html", "refresh");
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("images", function () {
