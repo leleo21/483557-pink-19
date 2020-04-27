@@ -3,10 +3,6 @@
   background-color: @white;
 }
 
-.photo_container {
-  width: 320px;
-  margin: 0 auto;
-}
 
 .photo__paragraph {
   width: 280px;
@@ -46,7 +42,7 @@
 
 .photo__label-panorama {
   position: absolute;
-  left: 160px;
+  left: 50%;
   width: 140px;
   height: 36px;
   background-color: @pink;
@@ -111,10 +107,6 @@
 }
 
 @media (min-width: 660px) {
-  .photo_container {
-    width: 660px;
-  }
-
   .photo__paragraph {
     width: 440px;
     padding: 94px 0 75px;
@@ -138,7 +130,7 @@
   }
 
   .photo__label-panorama {
-    left: 500px;
+    left: 76%;
     top: 57px;
   }
 
@@ -174,17 +166,12 @@
 }
 
 @media (min-width: 1200px) {
-  .photo_container {
-    width: 1200px;
-  }
-
   .photo__paragraph {
     width: 580px;
     padding-top: 93px;
   }
 
   .photo__list {
-    width: 940px;
     margin: 0 auto;
     justify-content: space-between;
   }
