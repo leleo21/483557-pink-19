@@ -10,7 +10,7 @@
 
 .upgade__paragpaph {
   margin: 0 auto;
-  padding: 36px 0 42px;
+  padding: 43px 0 42px;
   line-height: 30px;
   background-color: @white;
   text-align: center;
@@ -112,7 +112,7 @@
 }
 
 .upgrade__btn-form-wrapper {
-  padding-top: 41px;
+  padding: 36px 0 29px;
   border-top: 1px solid @dark-opac;
 }
 
@@ -170,7 +170,7 @@
 
   .upgade__paragpaph {
     margin: 0 auto;
-    padding: 73px 0 69px;
+    padding: 65px 0 69px;
     font-size: 18px;
     text-align: center;
     background-color: @white;
@@ -182,11 +182,12 @@
 
   .upgrade__form {
     display: flex;
+    width: 610px;
+    justify-content: space-between;
   }
 
   .upgrade__instruments {
     width: 260px;
-    margin: 0 auto;
   }
 
   .upgrade__image {
@@ -200,7 +201,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 260px;
+    width: 253px;
   }
 
   .upgrade__range-wrapper {
@@ -210,7 +211,7 @@
   .upgrade__btn-custom-wrapper {
     flex-direction: column;
     align-items: center;
-    width: 50px;
+    width: 22px;
     height: 175px;
     margin: 0;
     padding: 0;
@@ -251,9 +252,9 @@
     content: "";
     position: absolute;
     top: 73px;
-    left: -45px;
+    left: -55px;
     width: 275px;
-    height: 2px;
+    height: 1px;
     background-color: @dark-opac;
   }
 
@@ -265,6 +266,7 @@
   }
 
   .upgrade__btn-form-wrapper {
+    padding-bottom: 6px;
     border: none;
   }
 
@@ -275,8 +277,32 @@
 }
 
 @media (min-width: 1200px) {
+  .upgrade {
+    margin-bottom: 97px;
+    background-color: @white;
+  }
+
+  .upgade__paragpaph {
+    padding: 49px 0 66px;
+  }
+
   .upgrade__container {
     width: 940px;
+    background-color: @grey;
+  }
+
+  .upgrade__form {
+    width: 781px;
+    margin: 0 auto;
+  }
+
+  .upgrade__instruments {
+    width: 410px;
+    margin-left: 90px;
+  }
+
+  .upgrade__custom-wrapper {
+    width: 410px;
   }
 
   .upgrade__btn-custom-wrapper {
@@ -304,10 +330,35 @@
     }
   }
 
+  .upgrade__range-wrapper {
+    width: 288px;
+  }
+
+  .upgrade__range-block {
+    width: 288px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 73px;
+      left: -120px;
+      width: 410px;
+      height: 1px;
+    }
+  }
+
+  .upgrade__range {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 288px;
+  }
+
   .upgrade__btn-form-wrapper {
     display: flex;
     justify-content: space-between;
     width: 410px;
+    padding: 122px 0 0;
   }
 
   .upgrade__btn {
