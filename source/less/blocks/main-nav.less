@@ -5,8 +5,27 @@
   text-transform: uppercase;
   background-color: @dark;
 
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 0.5;
+    }
+
+    80% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   &--opened {
     display: block;
+    animation: open 0.8s ease;
   }
 
   &--closed {
@@ -56,7 +75,7 @@
   .main-nav__list {
     display: flex;
     justify-content: space-around;
-    width: 694px;
+    width: 704px;
   }
 
   .main-nav__item {
@@ -71,7 +90,7 @@
       left: 0;
       top: 60px;
       width: 100%;
-      height: 3px;
+      height: 2px;
       background-color: @white;
     }
   }

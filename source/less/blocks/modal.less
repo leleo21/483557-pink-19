@@ -1,5 +1,11 @@
 .modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
   width: 320px;
+  margin-left: -160px;
+  opacity: 0;
+  z-index: -1;
   text-align: center;
   background-color: @white;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
@@ -7,6 +13,12 @@
   &--error &__btn-wrapper {
     background-color: @white;
   }
+}
+
+.modal__error-show,
+.modal__success-show {
+  opacity: 1;
+  z-index: 1;
 }
 
 .modal__title {

@@ -162,7 +162,7 @@
     &--cut {
       visibility: visible;
       padding-left: 15px;
-      text-transform: capitalize;
+      text-transform: inherit;
       border: none;
     }
 
@@ -224,6 +224,12 @@
 }
 
 @media (min-width: 1200px) {
+  .price {
+    padding-top: 40px;
+    background-position: top;
+    background-size: contain;
+  }
+
   .price__container {
     width: 1200px;
     padding: 118px 0 93px;
