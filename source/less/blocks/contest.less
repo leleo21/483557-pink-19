@@ -107,6 +107,7 @@
   &:hover,
   &focus {
     border: 2px solid @dark;
+    transition: @animation;
   }
 
   &:focus {
@@ -218,6 +219,7 @@
 .contest__radio-option:focus + .contest__radio-title::before,
 .contest__checkbox-option:focus + .contest__checkbox-title::before {
   border-color: @dark;
+  transition: @animation;
 }
 
 .contest__radio-option + .contest__radio-title:active::before,
@@ -236,6 +238,7 @@
   &:hover,
   &:focus {
     border: 2px solid @dark;
+    transition: @animation;
   }
 
   &:focus {
@@ -272,6 +275,7 @@
   &:focus {
     background-color: @green-hover;
     border: 2px solid @green-hover;
+    transition: @animation;
   }
 
   &:active {
