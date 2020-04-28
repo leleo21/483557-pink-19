@@ -11,13 +11,16 @@
   z-index: 1;
 }
 
-.page-header__wrapper-logo-btn {
+.page-header__control {
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 24px;
+}
+
+.page-header__control-bgc {
   background-color: @dark-bgc;
 }
 
@@ -155,7 +158,7 @@
     width: 660px;
   }
 
-  .page-header__wrapper-logo-btn {
+  .page-header__control {
     display: flex;
     align-items: flex-end;
     width: 660px;
@@ -181,7 +184,7 @@
 
 @media (min-width: 1200px) {
   .page-header {
-    background-color: rgba(40, 54, 69, 0.7);
+    background-color: @dark-bgc;
     z-index: 1;
     position: relative;
   }
@@ -189,7 +192,6 @@
   .page-header__toggle {
     display: none;
   }
-
 
   .page-header__wrapper {
     display: flex;
@@ -210,7 +212,7 @@
     }
   }
 
-  .page-header__wrapper-logo-btn {
+  .page-header__control {
     width: 147px;
     margin: 0;
     padding-left: 10px;
