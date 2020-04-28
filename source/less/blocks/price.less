@@ -9,7 +9,7 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  padding: 115px 0 98px;
+  padding: 115px 0 100px;
   overflow: hidden;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .price__options {
-  border: 2px solid @grey;
+  border: 2px solid @brdr-clr;
 }
 
 .price__options-access {
@@ -78,7 +78,7 @@
   text-transform: uppercase;
   color: @dark;
   background-color: white;
-  border: 2px solid @grey;
+  border: 2px solid @brdr-clr;
 
   &--cut {
     visibility: hidden;
@@ -90,7 +90,13 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 12px 17px;
+  padding: 15px 17px 11px;
+}
+
+.price__options-image {
+  display: inline-block;
+  width: 30px;
+  height: 27px;
 }
 
 .price__image-no {
@@ -133,6 +139,7 @@
   &:focus {
     background-color: @dark;
     opacity: 0.6;
+    transition: @animation;
   }
 
   &:active {
@@ -147,12 +154,12 @@
 
   .price__container {
     width: 660px;
-    padding: 90px 0 67px;
+    padding: 84px 0 67px;
   }
 
   .price__options-wrapper {
     justify-content: center;
-    padding: 5px;
+    padding: 7px;
   }
 
   .price__options-access {
@@ -162,7 +169,7 @@
     &--cut {
       visibility: visible;
       padding-left: 15px;
-      text-transform: capitalize;
+      text-transform: inherit;
       border: none;
     }
 
@@ -224,8 +231,15 @@
 }
 
 @media (min-width: 1200px) {
+  .price {
+    padding-top: 40px;
+    background-position: top;
+    background-size: contain;
+  }
+
   .price__container {
     width: 1200px;
+    padding: 118px 0 93px;
   }
 
   .price__table {
@@ -233,7 +247,7 @@
   }
 
   .price__title-blog {
-    padding: 19px 30px 23px;
+    padding: 16px 30px 23px;
 
     &--hit {
       width: 74px;
@@ -257,7 +271,7 @@
   }
 
   .price__options-wrapper {
-    padding: 12px;
+    padding: 14px;
   }
 
   .price__options-access--cut {

@@ -28,6 +28,7 @@
   &:focus {
     color: @dark;
     text-decoration: underline;
+    transition: @animation;
   }
 
   &:active {
@@ -45,7 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 29px;
+    padding-top: 24px;
     padding-bottom: 9px;
     text-align: center;
   }
@@ -67,12 +68,12 @@
 @media (min-width: 1200px) {
   .contacts__title {
     width: 560px;
-    padding-bottom: 70px;
+    padding-bottom: 38px;
     font-size: 50px;
   }
 
   .contacts__item {
-    width: 900px;
+    width: 880px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -88,6 +89,10 @@
   }
 
   .contacts__text {
-    padding-bottom: 34px;
+    padding-bottom: 28px;
+  }
+
+  .contacts__link {
+    width: 240px;
   }
 }

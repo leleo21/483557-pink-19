@@ -16,7 +16,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 280px;
-  padding: 16px 0;
+  padding: 16px 1px;
   margin: 27px 0 30px;
   font-size: 18px;
   font-weight: 700;
@@ -32,6 +32,7 @@
   &:focus {
     background-color: @white;
     color: @pink;
+    transition: @animation;
   }
 
   &:active {
@@ -42,6 +43,7 @@
 
 .download__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   width: 204px;
@@ -94,7 +96,7 @@
     width: 300px;
     margin: 0;
     margin-left: 10px;
-    padding: 10px 0 79px;
+    padding: 5px 0 80px;
     text-align: center;
     background-color: transparent;
   }
@@ -116,13 +118,12 @@
 @media (min-width: 1200px) {
   .download__container {
     width: 300px;
-    margin: 0 auto 0 125px;
-    padding-top: 30px;
-    padding-bottom: 92px;
+    margin: 0 auto 0 130px;
+    padding: 24px 0 90px;
   }
 
   .download__list {
-    margin: 40px auto 30px;
+    margin: 35px auto 34px;
   }
 
   .download__button {
